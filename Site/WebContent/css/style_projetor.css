@@ -1,0 +1,89 @@
+
+@font-face{
+    font-family: "minhaFonte";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+*{
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    /* background-color: #2B3C51; */
+
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #2B3C51;
+}
+
+main{
+    /* border: 1px dotted black; */
+    overflow: auto;
+    background-color: #2B3C51;
+}
+
+/* SECTION MENU */
+#menu{
+    /* border: 1px dotted black; */
+    /* float: left; */
+    font-family: minhaFonte;
+    padding: 20px;
+
+}
+#menu ul{
+    overflow: auto;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+#menu ul li{
+    /* position: relative; */
+
+    
+}
+#menu ul li a{
+    display: inline-block;
+    /* padding: 30px 10px; */
+    /* width: 120px; */
+    text-align: center;
+    padding: 5px 15px;
+    margin: auto;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    float: left;
+}
+#menu ul li a:hover{
+    background-color: dimgray;
+}
+#menu ul li a:link{
+    text-decoration: none;
+}
+#menu ul hr{
+    width: 150px;
+}
+/* SECTION CONTEÚDO */
+#conteudo{
+    /* border: 1px dotted black; */   
+    margin: auto;
+    width: 100%;
+    background-color: #EFEFEF;
+}
+
+#painel{
+    margin: auto;
+    margin-bottom: 70px;
+    text-align: center;
+    padding: 5px;
+    background-color: #EFEFEF;
+
+}
+/* RODAPÉ */
+footer{
+    text-align: center;
+    font-family: minhaFonte;
+    color:#EFEFEF;
+    padding: auto 15px;
+    background-color:#2B3C51 ;
+}

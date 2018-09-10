@@ -1,0 +1,120 @@
+#titulo{
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+    font-size: 70px;    
+}
+
+.linha{
+    border-color: rgb(63, 63, 63);
+    width: 800px;
+}
+
+.btn{
+    font-family: minhaFonte; 
+    width: 150px; 
+    height: 100px;
+    display: block;
+    margin: 60px 58px;
+}
+
+#subtitulo{
+    color: rgb(83, 83, 83);
+    font-size: 16px;
+    padding: 4px;
+}
+
+.image{
+    padding: 10px 10px;
+    opacity: 0.3;
+}
+
+/* BOTÕES */
+#btnCadastrar{
+    background: #333333;
+    width: 1000px;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+#btnCadastrar:hover{
+    background-color: dimgray;
+    
+}
+
+#btnInferior{
+    background: #333333;
+    width: 200px;
+    margin: auto 80px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+#btnInferior:hover{
+    background-color: dimgray;
+}
+
+.btn-green{
+    background: rgb(156, 236, 209);
+}
+
+.btn-green:hover{
+    background: rgb(186, 248, 228);
+}
+
+/* DIV LISTA */
+#divLista{
+    margin:10px auto;
+    width: 1000px;
+    height: 350px;
+    margin-bottom: 40px;
+    overflow: auto; 
+}
+
+#conteudoColaboradores{
+    float: right;
+    width: 80%;
+    padding-bottom: 33px;
+    background-color: #EFEFEF;
+}
+
+#painelColaboradores{
+    margin-bottom: 70px;
+    text-align: center;
+    padding: 40px;
+    background-color: #EFEFEF;
+}
+
+.celulaCod{
+	text-align: Center;
+	width: 20px;
+}
+.celulaNome{
+	text-align:center;
+}
+.celulaCargo{
+	text-align:center;
+}
+
+.celulaSelect{
+	text-align: center;
+}
+.checkSelect{
+	text-align:left;
+}
+
+#minhaDiv{
+	display: none;
+}
+
+

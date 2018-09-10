@@ -1,0 +1,153 @@
+@font-face{
+    font-family: "minhaFonte";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+#aluno{
+    margin-bottom: 70px;
+    text-align: justify;
+    padding: 40px;
+    background-color:#EFEFEF;
+}
+
+.linha{
+    border-color: rgb(63, 63, 63);
+    width: 800px;
+}
+
+#aluno h1{
+    text-align: center;
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+    font-size: 70px; 
+}
+
+#aluno li.separador{
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 100px;
+    list-style-type: none;
+    
+}
+
+ /* Cadastrar alunos */
+#btnCadastrar{
+    background: #333333;
+    width: 1000px;
+    margin: 30px;
+    margin-bottom: 3px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: minhaFonte;
+    outline: none;
+   
+}
+#btnCadastrar:hover{
+    background-color: dimgray;
+}
+
+ /* Pesquisar Aluno */
+#pesquisarAluno {
+    width: 1000px;
+    margin-right: 15px;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left ;
+    outline: none;	
+}
+
+/*Tabela Listar alunos */
+.listaAlunos{
+    margin-left: 30px;
+    width: 93%;     
+}
+
+.lefth{ 
+    text-align: left;
+    width: 200px;
+    font: 20px bold; 
+    font-family: minhaFonte;
+    
+}
+.right{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;  
+}
+
+.tdLeft{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;
+}
+.tdRight{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;
+}
+
+#listarAlunos{
+    margin-left: 30px;
+    width: 1000px;
+    height: 250px;
+    overflow: auto;
+}
+/* Botões cadastrar e alterar */
+#btnInferior{
+    background: #333333;
+    width: 400px;
+    margin: auto 80px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+    outline: none;
+}
+#btnInferior:hover{
+    background-color: dimgray;
+}
+
+/* MODAL */
+.titulo{
+	text-align: center;
+	font-family: minhaFonte;
+	font-size: 30px;
+}
+#botao{
+	text-align: center;
+}
+.estiloModal input[type="submit"]{
+	font-family: minhaFonte;
+	font-size: 20px !important;
+	width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center ;
+    background: #333333;
+    color: white;
+    
+}
+.separador{
+	border-color: rgb(63, 63, 63);
+    width: 500px;
+}
+
+#titulo{
+	text-align: center;
+	font-family: minhaFonte;
+	font-size: 25px;
+}
+
+	
+
+

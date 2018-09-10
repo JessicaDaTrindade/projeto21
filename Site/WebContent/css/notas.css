@@ -1,0 +1,119 @@
+@font-face{
+    font-family: "minhaFonte";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+*{
+    text-align: center;
+}
+
+#nota{
+    margin-bottom: 70px;
+    text-align: justify;
+    padding: 40px;
+    background-color:#EFEFEF;
+}
+
+#nota h1{
+    text-align: center;
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+    font-size: 70px; 
+}
+
+#nota li.separador{
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 100px;
+    
+    list-style-type: none;
+    }
+
+    /* Pesquisar notas */
+#btnCadastrar{
+    background: #333333;
+    width: 1000px;
+    margin: 30px;
+    margin-bottom: 3px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font: 30px bold;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    
+}
+
+#btnPesquisar{
+    background: #333333;
+    width: 300px;
+    margin: 30px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font: 30px bold;
+    border-radius: 10px;
+    font-family: minhaFonte;
+
+}
+
+#pesquisarNota{
+    width: 665px;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/*Tabela Listar notas */
+.listanotas{
+    margin-left: 30px;
+    width: 93%;
+        
+}
+
+.lefth{ 
+    text-align: left;
+    width: 200px;
+    font: 20px bold; 
+    font-family: minhaFonte;
+    
+}
+.right{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;
+     
+}
+
+.tdLeft{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;
+    
+}
+.tdRight{
+    text-align: left;
+    font: 20px bold; 
+    font-family: minhaFonte;
+}
+#listarNotas{
+    margin-left: 30px;
+    width: 1000px;
+    height: 250px;
+    overflow: auto  
+}
+#btnInferior{
+    background: #333333;
+    width: 200px;
+    margin: auto 80px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+#btnInferior:hover{
+    background-color: dimgray;
+}

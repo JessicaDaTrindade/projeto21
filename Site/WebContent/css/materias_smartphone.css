@@ -1,0 +1,111 @@
+@font-face{
+    font-family: "minhaFonte";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+#titulo{
+    font-family: minhaFonte;
+    text-align: center;
+    color: rgb(63, 63, 63);
+    font-size: 70px;    
+}
+
+.linha{
+    border-color: rgb(63, 63, 63);
+    width: 800px;
+}
+
+/* BOTÕES */
+#btnCadastrar{
+    background: #333333;
+    width: 90%;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+#btnCadastrar:hover{
+    background-color: dimgray;
+    
+}
+#btnInferior{
+    background: #333333;
+    color: white;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+#btnInferior:hover{
+    background-color: dimgray;
+}
+
+/* CONTEÚDO */
+
+/* DIV MATÉRIAS */
+#materias{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+/* PAINEL */
+#painel h1{
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+    font-size: 70px; 
+}
+#painel hr{
+    border-color: dimgray;
+    width: 80%;
+}
+/* DIV LISTA */
+#divLista{
+    margin:10px auto;
+    width: 90%;
+    height: 350px;
+    margin-bottom: 40px;
+    overflow: auto; 
+}
+/* LISTA */
+.listaMaterias{
+    width: 950px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.listaMaterias td{
+    height: 40px;
+}
+.listaMaterias th{
+    height: 40px;
+    text-align: center;
+}
+.listaMaterias tr{
+    border-radius: 10px;
+}
+.listaMaterias tr{
+    border-radius: 10px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 10px;
+}
+.listaMaterias tr:nth-child(even){
+    background-color: #EFEFEF;
+}
+.listaMaterias tr:nth-child(odd){
+    background-color:rgb(204, 204, 204);    
+}
+.tdLeft{
+    width: 100px;
+}
