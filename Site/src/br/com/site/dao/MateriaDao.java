@@ -49,7 +49,7 @@ public class MateriaDao {
 	public String listarMateria() {
 		
 		//Estrutura
-		String estrutura = "<table class='table table-striped tabela'>";
+		String estrutura = "<table class='table table-striped'>";
 		estrutura += "<thead>";
 		estrutura += "<tr>";
 		estrutura += "<th class='celulaCod'>Código</th>"; 
@@ -58,6 +58,7 @@ public class MateriaDao {
 		estrutura += "<th class='celulaExcluir'>Excluir</th>";
 		estrutura += "</tr>";
 		estrutura += "</thead>";
+		estrutura += "<tbody>";
 		
 		//Obter os dados dos usuários
 		try {
@@ -81,11 +82,13 @@ public class MateriaDao {
 				estrutura += "<td class='celulaAlterar'><a href='#' data-toggle='modal' data-target='#modalAlterar"+rs.getString(1)+"' title='Alterar'><span class='celulaAlterar glyphicon glyphicon-pencil'></span></a></td>";
 				estrutura += "<td class='celulaExcluir'><a href='#' data-toggle='modal' data-target='#modalExcluir"+rs.getString(1)+"' title='Excluir'><span class='celulaExcluir glyphicon glyphicon-trash'></span></a></td>";				
 				estrutura += "</tr>";
+				
 				estrutura +=modalAlterar(rs.getString(1));
 				estrutura +=modalExcluir(rs.getString(1));
 			}
 			
 			//Finalizar a estrutura
+			estrutura += "</tbody>";
 			estrutura += "</table>";
 			
 			//Voltar rs para o índice 0

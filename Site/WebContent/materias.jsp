@@ -8,7 +8,7 @@
 <title>SGE | Matérias</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/style_projetor.css" />
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
     

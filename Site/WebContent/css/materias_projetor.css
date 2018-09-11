@@ -77,37 +77,6 @@
     width: 90%;
     height: 350px;
     margin-bottom: 40px;
-    overflow: auto; 
+    overflow: auto;
 }
-/* LISTA */
-.listaMaterias{
-    width: 950px;
-    text-align: center;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 10px;
-}
-.listaMaterias td{
-    height: 40px;
-}
-.listaMaterias th{
-    height: 40px;
-    text-align: center;
-}
-.listaMaterias tr{
-    border-radius: 10px;
-}
-.listaMaterias tr{
-    border-radius: 10px;
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 10px;
-}
-.listaMaterias tr:nth-child(even){
-    background-color: #EFEFEF;
-}
-.listaMaterias tr:nth-child(odd){
-    background-color:rgb(204, 204, 204);    
-}
-.tdLeft{
-    width: 100px;
-}
+

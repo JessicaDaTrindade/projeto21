@@ -76,17 +76,22 @@
     width: 1000px;
     height: 350px;
     margin-bottom: 40px;
-    overflow: auto; 
+    overflow: auto;
+    
+   
 }
 /* LISTA */
 .listaMaterias{
-    width: 950px;
-    text-align: center;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 10px;
+	margin: auto;
+}
+.listaMaterias thead{
+
+}
+.listaMaterias tbody{
+
 }
 .listaMaterias td{
+	text-align:center;	
     height: 40px;
 }
 .listaMaterias th{
@@ -94,11 +99,11 @@
     text-align: center;
 }
 .listaMaterias tr{
+	text-align:center;	
     border-radius: 10px;
 }
 .listaMaterias tr{
-    border-radius: 10px;
-    border: 1px solid rgb(207, 207, 207);
+   	text-align:center;	
     border-radius: 10px;
 }
 .listaMaterias tr:nth-child(even){
@@ -106,20 +111,6 @@
 }
 .listaMaterias tr:nth-child(odd){
     background-color:rgb(204, 204, 204);    
-}
-.celulaCod{
-	text-align: Center;
-	width: 20px;
-}
-.celulaMateria{
-	text-align:center;
-
-}
-.celulaSelect{
-	text-align: center;
-}
-.checkSelect{
-	text-align:left;
 }
 
 /* ESTILO CELULAS TABELA DETALHES MATÉRIA */
@@ -131,13 +122,20 @@
 	text-align:center;
 
 }
-.celulaSelect{
-	text-align: center;
+.celulaCod{
+	text-align: Center;
+	width: 20px;
 }
-.checkSelect{
-	text-align:left;
+.celulaMateria{
+	text-align:center;
+
 }
-.celulaNome{
+.celulaAlterar{
 	text-align: center;
+	width: 20px;
+}
+.celulaExcluir{
+	text-align: center;
+	width: 20px;
 }
 
