@@ -9,6 +9,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 import br.com.site.bean.AlunoBEAN;
+import br.com.site.bean.MateriaBean;
 import br.com.site.connection.Conexao;
 
 public class AlunoDAO {
@@ -76,17 +77,19 @@ public class AlunoDAO {
 		String sql = "select * From cadastrosalunos";
 		
 		//Estrutura
-		String estrutura = "<table class='table table-striped' id='tabela'>";
+		String estrutura = "<table class='table table-striped' id='tabela' >";
 			
 			//Cabeçalho da tabela
          	estrutura+= "<thead>";
          		estrutura+="<tr>";
          			estrutura+="<th class='lefth'>Número Matrícula</th>";
          			estrutura+=" <th class='right'>Nome</th>";
+         			estrutura+="<th class='lefth'>Excluir</th>";
+         			estrutura+=" <th class='right'>Alterar</th>";
          		estrutura+="</tr>";
          	estrutura+="</thead>";
          	
-         	
+         
          	//Conteúdos da tabela
          	estrutura+="<tbody>";
          	
@@ -101,13 +104,20 @@ public class AlunoDAO {
          			estrutura+="<td class='tdLeft' >"+rs.getInt("idCadastro")+"</td>";
          			estrutura+="<td class='tdRight'>"+rs.getString("nome")+" "+rs.getString("sobrenome")+"</td>";
          			estrutura+="<td class='tdRight'>";
-         			estrutura+="<a href='excluirAluno.jsp?codigo="+rs.getInt("idCadastro")+"'>";
-         			estrutura+="<img src='img/delete.png'>";
+         			//estrutura+="<a href='acoes/excluirAluno.jsp?codigo="+rs.getInt("idCadastro")+"'>";
+         			estrutura+="<a href='' data-toggle='modal' data-target='#modalExcluir"+rs.getInt("idCadastro")+"'>";
+         			estrutura+="<span class='glyphicon glyphicon-trash'> ";
          			estrutura+="</a>";
-         			
+         	    	estrutura+="</td>";
+         	    	estrutura+="<td class='tdRight'>";
+         	    	estrutura+="<a href='acoes/alterarAluno.jsp?codigo="+rs.getInt("idCadastro")+"'>";
+         			estrutura+="<span class='glyphicon glyphicon-pencil'>";
+         			estrutura+="</a>";
          			estrutura+="</td>";
          			
          		estrutura+="</tr>";
+         		
+         		estrutura +=modalExcluir(rs.getString("idCadastro"));
          		
          	}
          	
@@ -115,13 +125,40 @@ public class AlunoDAO {
          		
          	}
          	
-         	
+         	estrutura+="</tbody>";
          	//Término da tabela
          	estrutura += "</table>";
          	
          	//Retorno
          	return estrutura;
 	}
+	
+	
+	//MÉTODO MODAL EXCLUIR ALUNO
+		public String modalExcluir(String idCadastro){
+			
+			String estruturaExcluir = "<div class='modal fade' id='modalExcluir"+idCadastro+"' tabindex='-1' role='dialog'>";	
+			estruturaExcluir+="<div class='modal-dialog' role='document'>";
+			estruturaExcluir+="<div class='modal-content'>";
+			estruturaExcluir+="<div class='modal-header'>";
+			estruturaExcluir+="<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+			estruturaExcluir+="<h4 class='modal-title'>Excluir Aluno</h4>";
+			estruturaExcluir+="</div>";
+			estruturaExcluir+="<div class='modal-body'>";
+			estruturaExcluir+="<p>Deseja realmente excluir?</p>";
+			
+			estruturaExcluir+="</div>";
+			estruturaExcluir+="<div class='modal-footer'>";
+			estruturaExcluir+="<a class='btn btn-danger' href='acoes/excluirAluno.jsp?idCadastro="+idCadastro+"'>Excluir</a>";
+			estruturaExcluir+="<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>";
+			estruturaExcluir+="</div>";
+			estruturaExcluir+="</div><!-- /.modal-content -->";
+			estruturaExcluir+="</div><!-- /.modal-dialog -->";
+			estruturaExcluir+="</div><!-- /.modal -->";
+			
+			return estruturaExcluir;
+		}
+		
 	
 	//Método para excluir 
 	public void excluirAluno(int idCadastro) {
@@ -149,7 +186,36 @@ public class AlunoDAO {
 		}catch(Exception e) {
 			System.out.println( "Falha ao excluir");
 		}
-		
 	}
+		
+	/*MÉTODO ALTERAR ALUNO ###############################################
+		public void alterarAluno(AlunoBEAN obj) {
+			
+			//Tenta atualizar
+			try {
+				
+				//SQL
+				/*String sql = "UPDATE alunos SET  nome, sobrenome, sexo, dataNascimento, estadoCivil, cpf, rg, cep, logradouro, numero,\"\r\n" + 
+						"					+ \"bairro, municipio, complemento, telefone,celular, nomeDaMae, nomeDoPai,\"\r\n" + 
+						"					+ \"responsavel, telResponsavel, celResponsavel, email  \"\r\n" + 
+						"					+ \"( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\";
+				
+				//Prepara a conexão
+				PreparedStatement pstmt = conexao.prepareStatement(sql);
+				
+				//Parâmetros
+				pstmt.setString(1, obj.getNomeMateria());
+				pstmt.setInt(2, obj.getIdMateria());
+				
+				//Executar
+				pstmt.execute();
+				
+			}catch(Exception e) {
+				System.out.println("Falha ao alterar");
+				}*/
+			
+			
+		
+
 	
 }
