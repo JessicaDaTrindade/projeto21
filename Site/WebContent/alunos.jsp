@@ -169,7 +169,7 @@
         	<br>	        	
         	<label>Nome da Mãe
         	<br>
-        	<input type="text" name="nomeDaMae"">
+        	<input type="text" name="nomeDaMae">
         	</label>
         	<label>Nome do Pai
         	<br>
@@ -254,6 +254,8 @@
        
     </div>
   </div>
+</div>
+</div>
 </div>
 
 </body>

@@ -3,7 +3,7 @@
 
 <%
 	//Obter os dados do aluno
-	String nome = request.getParameter("nome");
+	String nome = request.getParameter("nomeAluno");
 	String sobrenome = request.getParameter("sobrenome");
 	String sexo = request.getParameter("sexo");
 	String dataNascimento = request.getParameter("dataNascimento");
@@ -24,6 +24,7 @@
 	String telResponsavel = request.getParameter("telResponsavel");
 	String celResponsavel = request.getParameter("celResponsavel");
 	String email = request.getParameter("email");
+	int id = Integer.parseInt(String.valueOf(request.getParameter("idCadastro")));
 	
 	//Cria um objeto aluno
 	AlunoBEAN obj = new AlunoBEAN();
@@ -48,12 +49,14 @@
 	obj.setTelResponsavel(telResponsavel);
 	obj.setCelResponsavel(celResponsavel);
 	obj.setEmail(email);
+	obj.setIdCadastro(id);
 	
 	
-	/*Executar o comando DAO
-	new AlunoDAO().alterarAluno(obj);*/
+	//Executar o comando DAO
+	new AlunoDAO().alterarAluno(obj);
 	
 	//Redirecionamento
+	
 	response.sendRedirect("../alunos.jsp");
 	
 	
