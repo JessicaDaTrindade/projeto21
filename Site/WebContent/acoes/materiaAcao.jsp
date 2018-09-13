@@ -13,7 +13,7 @@
 	new MateriaDao().cadastrarMateria(obj);
 
 	//Redirecionamento
-	response.sendRedirect("../materias.jsp");
+	response.sendRedirect("../materias.jsp"); 
 	
 	
 
