@@ -79,4 +79,36 @@
     margin-bottom: 40px;
     overflow: auto;
 }
+/* ESTILO CELULAS TABELA DETALHES MATÉRIA */
+.celulaCod{
+	text-align: Center;
+	width: 20px;
+}
+.celulaMateria{
+	text-align:center;
+
+}
+.celulaCod{
+	text-align: Center;
+	width: 20px;
+}
+.celulaMateria{
+	text-align:center;
+
+}
+.celulaAlterar{
+	text-align: center;
+	width: 20px;
+}
+.celulaExcluir{
+	text-align: center;
+	width: 20px;
+}
+.fieldObrigatorio{
+	font-size: 10px;
+	text-color: red;
+	color: red;
+	display: none;
+}
+
 

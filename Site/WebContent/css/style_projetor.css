@@ -87,3 +87,9 @@ footer{
     padding: auto 15px;
     background-color:#2B3C51 ;
 }
+.fieldObrigatorio{
+	font-size: 10px;
+	text-color: red;
+	color: red;
+	display: none;
+}

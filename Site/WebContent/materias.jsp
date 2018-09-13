@@ -22,6 +22,9 @@
 <!-- JQuery -->
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<!-- Valida Materia-->
+<script language="JavaScript" src="script/validaMateria.js"></script>
+
 
 <!-- Bootstrap -->
 <!-- Latest compiled and minified CSS -->
@@ -125,13 +128,20 @@
 				<div class="modal-body">
 					<div>
 
-						<form action="acoes/materiaAcao.jsp">
+						<form action="acoes/materiaAcao.jsp" name="formMateria" id="formMateria" onSubmit="return enviardados();">
 
 							<!-- CADASTRAR MATÉRIA -->
-							<input type="text" name="nome" placeholder="Nome Matéria">
-
-							<!-- enviar para o banco de dados -->
-							<input type="submit" value="Cadastrar">
+							<li>
+								<input type="text" name="nomeMateria" id="txtNomeMateria" placeholder="Nome Matéria">
+								<!-- enviar para o banco de dados -->
+								<input type="submit" value="Cadastrar" class="button button-primary">
+							</li>
+							
+							<li>
+							<label class="fieldObrigatorio" id="lblNomeMateria">Campo obrigatório</label>
+							</li>
+							
+							
 						</form>
 
 

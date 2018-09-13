@@ -3,7 +3,7 @@
 
 <%
 	//Obter dados matéria
-	String nome = request.getParameter("nome");
+	String nome = request.getParameter("nomeMateria");
 
 	//Criar obketo matéria
 	MateriaBean obj = new MateriaBean();
