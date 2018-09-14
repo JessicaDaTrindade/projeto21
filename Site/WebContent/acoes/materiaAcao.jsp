@@ -9,7 +9,7 @@
 	MateriaBean obj = new MateriaBean();
 	obj.setNomeMateria(nome);
 	
-	//Executar comando DAO sdsd
+	//Executar comando DAO
 	new MateriaDao().cadastrarMateria(obj);
 
 	//Redirecionamento
