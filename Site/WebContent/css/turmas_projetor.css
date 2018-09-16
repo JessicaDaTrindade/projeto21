@@ -15,7 +15,6 @@
     width: 150px; 
     height: 100px;
     display: block;
-    margin: 60px 58px;
 }
 
 #subtitulo{
@@ -44,9 +43,11 @@
 }
 
 #painelTurmas{
+	margin: auto;
 	padding: 5px;
     text-align: center;
     background-color: #EFEFEF;
-    height: 200px;
+    height: 500px;
+    width: 80%;
     overflow: auto;
 }
