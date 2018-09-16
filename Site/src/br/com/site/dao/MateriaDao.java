@@ -70,7 +70,7 @@ public class MateriaDao {
 			//Comando para executar o comando SQL
 			Statement stmt = conexao.createStatement();
 			
-			//Executar o comando e obter os dados
+			//Executar o comando e obter os dados 
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			//Laço

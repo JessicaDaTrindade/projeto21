@@ -28,7 +28,7 @@ public class TurmaDAO {
 			//Var
 			String sql = "SELECT * FROM TURMAS";
 			
-			//Executar SQL
+			//Executar SQL 
 			Statement stmt = conexao.createStatement();
 			
 			

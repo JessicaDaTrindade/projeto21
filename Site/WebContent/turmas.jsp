@@ -84,7 +84,7 @@
 
     </main>
 
-    <footer> E21 - 2018</footer>
+    <footer> E21 - 2018 </footer>
 
 </body>
 </html>
