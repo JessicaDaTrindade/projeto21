@@ -53,7 +53,7 @@
 	obj.setIdCadastro(idCadastro);
 	
 	
-	//Executar o comando DAO
+	//Executar o comandoo DAO
 	new AlunoDAO().alterarAluno(obj);
 	
 	//Redirecionamento

@@ -242,7 +242,7 @@ public class AlunoDAO {
 
 	}
 
-	// MÉTODO MODAL #########################################################
+	// MÉTODO MODAL ##########################################################
 	public String modalAlterar(String idCadastro) {
 
 		// Instanciar objeto usuário
