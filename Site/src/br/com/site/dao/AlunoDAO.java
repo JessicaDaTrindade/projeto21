@@ -62,7 +62,7 @@ public class AlunoDAO {
 
 			// Executar comando
 			pstmt.execute();
-
+			System.out.println("ok");
 		} catch (Exception e) {
 			System.out.println("Falha ao cadastrar " + e.getMessage());
 		}
@@ -208,7 +208,6 @@ public class AlunoDAO {
 			ResultSet rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-
 				obj.setIdCadastro(rs.getInt(1));
 				obj.setNome(rs.getString(2));
 				obj.setSobrenome(rs.getString(3));
@@ -261,7 +260,8 @@ public class AlunoDAO {
 		estruturaAlterar += "</div>";
 		estruturaAlterar += "<div class='modal-body'>";
 		estruturaAlterar += "<div>";
-		estruturaAlterar += "<form action='acoes/alunoAcao.jsp'>";
+		estruturaAlterar += "<form action='acoes/alterarAluno.jsp'>";
+		estruturaAlterar += "<input type='hidden' name='idCadastro' value='"+aluno.getIdCadastro()+"'>"; 
 		estruturaAlterar += "<label>Nome";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<input type='text' name='nome' value='"+aluno.getNome()+"'>";
@@ -347,38 +347,37 @@ public class AlunoDAO {
 			estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil' >Divorciado(a)";
 			estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'checked>Viúvo(a)";
 		}
-		
 		estruturaAlterar += "</label>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<hr class='separador'>";
 		estruturaAlterar += "<h5 id='titulo'>Dados Responsável</h5>";
 		estruturaAlterar += "<label>Nome Responsável";
 		estruturaAlterar += "<br>";
-		estruturaAlterar += "<input type='text' name='responsavel'>";
+		estruturaAlterar += "<input type='text' name='responsavel' value='"+aluno.getResponsavel()+"'>";
 		estruturaAlterar += "</label>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<label>Telefone Responsável";
 		estruturaAlterar += "<br>";
-		estruturaAlterar += "<input type='text' id='name' class='phone-ddd-mask' name='telResponsavel' placeholder='Ex.: (00) 0000-0000'>";
+		estruturaAlterar += "<input type='text' id='name' class='phone-ddd-mask' name='telResponsavel' placeholder='Ex.: (00) 0000-0000' value='"+aluno.getTelResponsavel()+"'>";
 		estruturaAlterar += "</label>";
 		estruturaAlterar += "<label>Celular Responsável";
 		estruturaAlterar += "<br>";
-		estruturaAlterar += "<input type='text' class='phone-ddd-mask' name='celResponsavel' placeholder='Ex.: (00) 0000-0000'>";
+		estruturaAlterar += "<input type='text' class='phone-ddd-mask' name='celResponsavel' placeholder='Ex.: (00) 0000-0000' value='"+aluno.getCelResponsavel()+"'>";
 		estruturaAlterar += "</label>";
 		estruturaAlterar += "<hr class='separador'>";
 		estruturaAlterar += "<h6 id='titulo'>Endereço</h6>";
-		estruturaAlterar += "<input type='text' name='cep' placeholder='CEP'>";
-		estruturaAlterar += "<input type='text' name='logradouro' placeholder='LOGRADOURO'>";
-		estruturaAlterar += "<input type='text' name='numero' placeholder='Nº'>";
+		estruturaAlterar += "<input type='text' name='cep' placeholder='CEP' value='"+aluno.getCep()+"'>";
+		estruturaAlterar += "<input type='text' name='logradouro' placeholder='LOGRADOURO' value='"+aluno.getLogradouro()+"'>";
+		estruturaAlterar += "<input type='text' name='numero' placeholder='Nº' value='"+aluno.getNumero()+"'>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<br>";
-		estruturaAlterar += "<input type='text' name='bairro' placeholder='BAIRRO'>";
-		estruturaAlterar += "<input type='text' name='municipio' placeholder='MUNICÍPIO'>";
-		estruturaAlterar += "<input type='text' name='complemento' placeholder='COMPLEMENTO'>";
+		estruturaAlterar += "<input type='text' name='bairro' placeholder='BAIRRO' value='"+aluno.getBairro()+"'>";
+		estruturaAlterar += "<input type='text' name='municipio' placeholder='MUNICÍPIO' value='"+aluno.getMunicipio()+"'>";
+		estruturaAlterar += "<input type='text' name='complemento' placeholder='COMPLEMENTO' value='"+aluno.getComplemento()+"'>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "<div id='botao'>";
-		estruturaAlterar += "<input type='submit' value='Salvar'>";
+		estruturaAlterar += "<input type='submit' class='btn btn-primary' value='Salvar'>";
 		estruturaAlterar += "<br>";
 		estruturaAlterar += "</div>";
 		estruturaAlterar += "</form>";
@@ -398,8 +397,7 @@ public class AlunoDAO {
 		// Tenta atualizar
 		try {
 
-			System.out.println("Nome: " + obj.getNome());
-			System.out.println("Id: " + obj.getIdCadastro());
+			
 
 			// SQL
 			String sql = "UPDATE cadastrosalunos SET  nome = ? WHERE idCadastro = ?";
@@ -414,7 +412,7 @@ public class AlunoDAO {
 			// Executar
 			pstmt.execute();
 
-			System.out.println("ok");
+			
 
 		} catch (Exception e) {
 			System.out.println("Falha ao alterar");
