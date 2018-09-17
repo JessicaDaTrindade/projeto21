@@ -26,7 +26,7 @@ public class TurmaDAO {
 		try {
 			
 			//Var
-			String sql = "SELECT * FROM TURMAS";
+			String sql = "SELECT * FROM TURMAS ORDER BY nomeTurma ASC";
 			
 			//Executar SQL 
 			Statement stmt = conexao.createStatement();
