@@ -341,11 +341,16 @@ public class AlunoDAO {
 			estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil'checked>Divorciado(a)";
 			estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viúvo(a)";
 			
-		}else{
+		}else if(aluno.getEstadoCivil().equals("viúvo(a)")){
 			estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' >Solteiro(a)";
 			estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil' Casado(a)";
 			estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil' >Divorciado(a)";
 			estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'checked>Viúvo(a)";
+		}else{
+			estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' >Solteiro(a)";
+			estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil' Casado(a)";
+			estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil' >Divorciado(a)";
+			estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viúvo(a)";
 		}
 		estruturaAlterar += "</label>";
 		estruturaAlterar += "<br>";
