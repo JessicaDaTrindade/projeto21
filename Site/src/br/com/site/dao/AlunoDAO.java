@@ -198,7 +198,7 @@ public class AlunoDAO {
 			// SQL
 			String sql = "SELECT * FROM cadastrosalunos WHERE idCadastro = ?";
 
-			// Prepara a conexão
+			// Prepara a conexãoo
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 
 			// Parâmetro
