@@ -176,7 +176,7 @@ public class AlunoDAO {
 			// Executar comando
 			pstmt.execute();
 
-			// Finalizar conexão com o banco de dados
+			// Finalizar conexão com o banco de dadoss
 			pstmt.close();
 
 			// Mensagem
