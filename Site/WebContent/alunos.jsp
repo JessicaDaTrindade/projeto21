@@ -26,6 +26,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
     
+    <!-- Validar nome aluno-->
+ <script language="JavaScript" src="script/validarNomeAluno.js"></script>
+ 
+   
+    
     <script src="js/script.js"></script>
 
 </head>
@@ -128,77 +133,78 @@
       <div class="modal-body">
       <div>
         
-        <form action="acoes/alunoAcao.jsp">
+        <form action="acoes/alunoAcao.jsp" >
         
 	        <!-- Cdastrar nome e sobrenome -->
 	        <label>Nome
 	        <br>
-	        <input type="text" name="nome">
+	        <input type="text" name="nome"  required >
 	        </label>
+	       
 	        <label>Sobrenome
 	        <br>
-	        <input type="text" name="sobrenome" >
+	        <input type="text" name="sobrenome" required >
         	</label>
         	
         	 <!-- Cadastrar Sexo  -->
         	<label>Sexo
         	<br>
-        	<input type="radio" value="F" name="sexo">Feminino
-        	<input type="radio" value="M" name="sexo">Masculino 
+        	<input type="radio" value="F" name="sexo" required>Feminino
+        	<input type="radio" value="M" name="sexo" >Masculino 
+        	
         	</label>
         	
         	<br>
-        	
         	
         	<!-- Cadastrar RG e CPF  -->
         	<label>RG
         	<br>
-        	<input type="text" name="rg" >
+        	<input type="text" name="rg" required>
         	</label>
         	
         	<label>CPF
         	<br>
-        	<input type="text" class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00" >
+        	<input type="text" class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00" required>
         	</label>
         	
         	<!-- cadastrar data de Nascimento -->
         	<label>Data de nascimento
         	<br>
-        	<input type="date" name="dataNascimento" >
+        	<input type="date" name="dataNascimento" required>
         	</label>
         	<br>	        	
         	<label>Nome da Mãe
         	<br>
-        	<input type="text" name="nomeDaMae">
+        	<input type="text" name="nomeDaMae"required>
         	</label>
         	<label>Nome do Pai
         	<br>
-        	<input type="text" name="nomeDoPai" >
+        	<input type="text" name="nomeDoPai"required >
         	</label>
         	<br>
         	        	
         	<!-- Cadastrar Telefone -->
         	<label>Telefone
         	 <br>      	 
-        	 <input type="text" id="name" class="phone-ddd-mask" name="telefone" placeholder="Ex.: (00) 0000-0000">
+        	 <input type="text" id="name" class="phone-ddd-mask" name="telefone" placeholder="Ex.: (00) 0000-0000" required>
         	 </label>  
         	 
         	 <label>Celular  
         	 <br>     	 
-        	 <input type="text" class="phone-ddd-mask" name="celular" placeholder="Ex.: (00) 0000-0000">
+        	 <input type="text" class="phone-ddd-mask" name="celular" placeholder="Ex.: (00) 0000-0000" required>
         	</label> 
         	<br>
         	<!-- Cadastrar e-mail -->
         	<label>E-mail
         	<br>
-        	<input type="email" name="email" placeholder="exemplo@exemplo.com.br">
+        	<input type="email" name="email" placeholder="exemplo@exemplo.com.br" required>
         	</label>
         	<br>
         	
         	<!-- Cadastrar estado civil -->
         	<label>Estado Civil
         	<br>
-        	<input type="radio" value="Solteiro(a)" name="estadoCivil">Solteiro(a)
+        	<input type="radio" value="Solteiro(a)" name="estadoCivil" required>Solteiro(a)
         	<input type="radio" value="Casado(a)" name="estadoCivil">Casado(a)
         	<input type="radio" value="Divorciado(a)" name="estadoCivil">Divorciado(a)
         	<input type="radio" value="Viuvo(a)" name="estadoCivil">Viúvo(a)
@@ -211,17 +217,17 @@
         	
         	<label>Nome Responsável
         	<br>
-        	<input type="text" name="responsavel">
+        	<input type="text" name="responsavel" required>
         	</label>
         	<br>
         	<label>Telefone Responsável
         	 <br>      	 
-        	 <input type="text" id="name" class="phone-ddd-mask" name="telResponsavel" placeholder="Ex.: (00) 0000-0000">
+        	 <input type="text" id="name" class="phone-ddd-mask" name="telResponsavel" placeholder="Ex.: (00) 0000-0000" required>
         	 </label>  
         	 
         	 <label>Celular Responsável 
         	 <br>     	 
-        	 <input type="text" class="phone-ddd-mask" name="celResponsavel" placeholder="Ex.: (00) 0000-0000">
+        	 <input type="text" class="phone-ddd-mask" name="celResponsavel" placeholder="Ex.: (00) 0000-0000" required>
         	</label> 
         	
         	<hr class="separador">
@@ -229,14 +235,14 @@
         	<!-- Cadastrar dados do endereço -->
         	<h6 id="titulo">Endereço</h6>
         	       	
-        	<input type="text" name="cep" placeholder="CEP"> 
-        	<input type="text" name="logradouro" placeholder="LOGRADOURO">
-        	<input type="text" name="numero" placeholder="Nº">
+        	<input type="text" name="cep" placeholder="CEP" required> 
+        	<input type="text" name="logradouro" placeholder="LOGRADOURO" required>
+        	<input type="text" name="numero" placeholder="Nº" required>
         	<br>
         	<br>
-        	<input type="text" name="bairro" placeholder="BAIRRO">
-        	<input type="text" name="municipio" placeholder="MUNICÍPIO">
-        	<input type="text" name="complemento" placeholder="COMPLEMENTO">
+        	<input type="text" name="bairro" placeholder="BAIRRO" required>
+        	<input type="text" name="municipio" placeholder="MUNICÍPIO" required>
+        	<input type="text" name="complemento" placeholder="COMPLEMENTO" required>
         	
         	<br>
         	<br>
