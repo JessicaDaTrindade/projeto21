@@ -6,6 +6,7 @@ public class MateriaBean {
 	private String nomeMateria;
 	private int idMateria;
 
+	//Getters and Setters
 	public int getIdMateria() {
 		return idMateria;
 	}
@@ -22,7 +23,7 @@ public class MateriaBean {
 		this.nomeMateria = nomeMateria;
 	}
 	
-	//Getters and Setters
+	
 	
 	
 	

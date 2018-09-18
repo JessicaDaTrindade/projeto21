@@ -3,17 +3,17 @@
 
 <%
 	//Obter dados matéria
-	String nome = request.getParameter("nome");
+	String nome = request.getParameter("nomeMateria");
 
 	//Criar obketo matéria
 	MateriaBean obj = new MateriaBean();
 	obj.setNomeMateria(nome);
 	
-	//Executar comando DAO sdsd
+	//Executar comando DAO
 	new MateriaDao().cadastrarMateria(obj);
 
 	//Redirecionamento
-	response.sendRedirect("../materias.jsp");
+	response.sendRedirect("../materias.jsp"); 
 	
 	
 

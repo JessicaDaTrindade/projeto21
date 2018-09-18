@@ -74,7 +74,7 @@ main{
     margin-bottom: 70px;
     text-align: justify;
     padding: 40px;
-    background-color: #EFEFEF;
+    background-color: #EFEFEF; 
 
 
 }
@@ -94,3 +94,10 @@ footer{
         color: red;
     }
 } */
+
+.fieldObrigatorio{
+	font-size: 10px;
+	text-color: red;
+	color: red;
+	display: none;
+}
