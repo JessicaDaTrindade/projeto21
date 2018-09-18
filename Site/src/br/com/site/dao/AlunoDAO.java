@@ -74,7 +74,7 @@ public class AlunoDAO {
 		// Estrutura
 		String estrutura = "<table class='table table-striped' id='tabela' >";
 
-		// Cabeçalho da tabela
+		// Cabeçalho da tabelaa
 		estrutura += "<thead>";
 		estrutura += "<tr>";
 		estrutura += "<th class='Matricula'>Número Matrícula</th>";

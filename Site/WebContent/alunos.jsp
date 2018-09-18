@@ -212,7 +212,7 @@
         	<br>
         	<hr class="separador">
         	
-        	<!-- Cadastrar Telefones para contato e responsável  -->
+        	<!-- Cadastrar Telefones para contato e responsávell  -->
         	 <h5 id="titulo">Dados Responsável</h5>
         	
         	<label>Nome Responsável
