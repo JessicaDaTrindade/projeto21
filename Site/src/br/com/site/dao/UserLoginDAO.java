@@ -1,0 +1,59 @@
+package br.com.site.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import br.com.site.bean.UserLoginBEAN;
+import br.com.site.connection.Conexao;
+
+public class UserLoginDAO {
+	
+	//Atributo contendo coexão com BD
+	Connection conexao;
+	
+	//Contrutor
+	public UserLoginDAO() {
+		this.conexao = new Conexao().obterConexao();
+	}
+	
+	//Método Login
+	public UserLoginBEAN login(String cpf, String senhaFuncionario) {
+		
+		//Objeto UserLoginBEAN
+		UserLoginBEAN obj = new UserLoginBEAN();
+		
+		//Tenta obter os dados do BD
+		try {
+			
+			//SQL
+			String sql = "SELECT idCargo, cpf, senhaFuncionario FROM cadastroFuncionarios WHERE cpf = ? AND senhaFuncionario = ?";
+			
+			//Preparar conexão
+			PreparedStatement pstmt = this.conexao.prepareStatement(sql);
+			
+			//Parâmetros do SQL
+			pstmt.setString(1, cpf);
+			pstmt.setString(2, senhaFuncionario);
+			
+			//Armazenar os resultados do comando SQL
+			ResultSet rs = pstmt.executeQuery();
+			
+			//Obter a última linha
+			rs.last();
+			
+			//Atributos do objeto UserLoginBEAN
+			obj.setCargo(rs.getInt(1));
+			obj.setUsuario(rs.getString(2));
+			obj.setSenha(rs.getString(3));
+			
+			
+		}catch(Exception e) {
+			System.out.println("Falha ao obter os dados.");
+		}
+		
+		//Retorno
+		return obj;
+	}
+
+}

@@ -1,8 +1,27 @@
 <!-- IMPORTAR CLASSES JAVA  -->
+<%@page import="br.com.site.bean.UserLoginBEAN"%>
 <%@ page import="br.com.site.connection.*"%>
 <!DOCTYPE html>
 <html>
 <head>
+
+	
+<%
+	//Verificar se há sessão
+	UserLoginBEAN user = new UserLoginBEAN();
+	try{
+		
+		user = (UserLoginBEAN) session.getAttribute("user");
+		if(user.getUsuario() == null){
+			response.sendRedirect("index.jsp");
+		}
+		
+	}catch(Exception erro){
+		user = new UserLoginBEAN();
+		response.sendRedirect("login.jsp");
+	}
+%>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Início</title>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="br.com.site.bean.UserLoginBEAN"%>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -21,26 +22,28 @@
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
 
+
+
 </head>
 <body>
     
-        <!-- DIV CONTEÚDO-->
+        <!-- DIV CONTE�DO-->
         <div id="teste">
 
             <!-- DIV LOGIN -->
             <div class="login">
 
 
-                <form id="frmLogin">
+                <form method="post" action="acoes/logar.jsp" id="frmLogin" >
 
 
-                        <input type="email" class="form-control " id="emailLogin" placeholder="Usuário">
+                        <input type="text" class="form-control " id="usuario" name="usuario" placeholder="CPF">
                         <br>          
-                        <input type="password" class="form-control " id="senhaLogin" placeholder="Senha">               
+                        <input type="password" class="form-control " id="senha" name="senha" placeholder="Senha">               
                         <br>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-default btn-lg btn-block">ENTRAR</button>
+                        <button type="submit" class="btn btn-default btn-lg btn-block">ENTRAR</button>
 
                 </form>
                 
