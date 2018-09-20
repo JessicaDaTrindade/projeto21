@@ -4,10 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- comentario jessica -->
-<!-- comentario amilton -->
-<!-- jessica -->
-	
 <%
 	//Verificar se há sessão
 	UserLoginBEAN user = new UserLoginBEAN();
@@ -23,6 +19,9 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
+<!-- comentario jessica -->
+<!-- comentario amilton -->
+<!-- jessica -->
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,18 +64,20 @@
         <section id="menu">
 
             <ul>
-                <li><a href="index.jsp">INÍCIO</a></li>
-                <!-- <hr> -->
-                <li><a href="colaboradores.jsp">COLABORADORES</a></li>
-                <!-- <hr> -->
-                <li><a href="alunos.jsp">ALUNOS</a></li>
-                <!-- <hr> -->
-                <li><a href="materias.jsp">MATÉRIAS</a></li>
-                <!-- <hr> -->
-                <li><a href="turmas.html">TURMAS</a></li>
-                <!-- <hr> -->
-                <li><a href="login.html">SAIR</a></li>
 
+<%-- 				<%@include file="inc/menuInc.jsp"; %> --%>
+<%
+	
+
+	if (user.getCargo() == 1) {
+		out.print(
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+	} else if (user.getCargo() == 3) {
+		out.print(
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+	}
+%>
+				
             </ul>
 
         </section>
