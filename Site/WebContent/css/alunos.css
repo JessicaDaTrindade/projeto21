@@ -72,30 +72,6 @@
 
 }
 
-.lefth{ 
-    text-align: left;
-    width: 200px;
-    font: 20px bold; 
-    font-family: minhaFonte;
-    
-}
-.right{
-    text-align: left;
-    font: 20px bold; 
-    font-family: minhaFonte;  
-}
-
-.tdLeft{
-    text-align: left;
-    font: 20px bold; 
-    font-family: minhaFonte;
-}
-.tdRight{
-    text-align: left;
-    font: 20px bold; 
-    font-family: minhaFonte;
-}
-
 #listarAlunos{
 	
 	margin-top: 10px;
@@ -106,7 +82,7 @@
     padding: 30px;
 }
 
-/* Botões cadastrar e alterar */
+/* Botões cadastrar e alterarr */
 #btnInferior{
     background: #333333;
     width: 400px;
@@ -157,6 +133,27 @@
 	font-size: 25px;
 }
 
+
+.Matricula{
+	text-align: Center;
+	width: 20px;
+}
+.Nome{
+	text-align:center;
+
+}
+
+.Alterar{
+	text-align: center;
+	width: 20px;
 	
+}
+.Excluir{
+	text-align: center;
+	width: 20px;
+	
+}	
+
+
 
 

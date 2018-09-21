@@ -5,11 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import javax.swing.JOptionPane;
-
 import br.com.site.bean.AlunoBEAN;
-import br.com.site.bean.MateriaBean;
 import br.com.site.connection.Conexao;
 
 public class AlunoDAO {
@@ -78,13 +74,13 @@ public class AlunoDAO {
 		// Estrutura
 		String estrutura = "<table class='table table-striped' id='tabela' >";
 
-		// Cabeçalho da tabela
+		// Cabeçalho da tabelaa
 		estrutura += "<thead>";
 		estrutura += "<tr>";
-		estrutura += "<th class='lefth'>Número Matrícula</th>";
-		estrutura += " <th class='right'>Nome</th>";
-		estrutura += "<th class='lefth'>Excluir</th>";
-		estrutura += " <th class='right'>Alterar</th>";
+		estrutura += "<th class='Matricula'>Número Matrícula</th>";
+		estrutura += " <th class='Nome'>Nome</th>";
+		estrutura += "<th class='Alterar'>Alterar</th>"; 
+		estrutura += "<th class='Excluir'>Excluir</th>";
 		estrutura += "</tr>";
 		estrutura += "</thead>";
 
@@ -99,24 +95,13 @@ public class AlunoDAO {
 			while (rs.next()) {
 
 				estrutura += "<tr>";
-				estrutura += "<td class='tdLeft' >" + rs.getInt("idCadastro") + "</td>";
-				estrutura += "<td class='tdRight'>" + rs.getString("nome") + " " + rs.getString("sobrenome") + "</td>";
-				estrutura += "<td class='tdRight'>";
-				// estrutura+="<a
-				// href='acoes/excluirAluno.jsp?codigo="+rs.getInt("idCadastro")+"'>";
-				estrutura += "<a href='' data-toggle='modal' data-target='#modalExcluir" + rs.getInt("idCadastro")
-						+ "'>";
-				estrutura += "<span class='glyphicon glyphicon-trash'> ";
-				estrutura += "</a>";
-				estrutura += "</td>";
-				estrutura += "<td class='tdRight'>";
-				estrutura += "<a href='' data-toggle='modal' data-target='#modalAlterar" + rs.getString("idCadastro")+"'>"; 
-				estrutura += "<span class='glyphicon glyphicon-pencil'>";
-				estrutura += "</a>";
-				estrutura += "</td>";
-
+				estrutura += "<td class='Matricula' >" + rs.getInt("idCadastro") + "</td>";
+				estrutura += "<td class='Nome'>" + rs.getString("nome") + " " + rs.getString("sobrenome") + "</td>";
+				estrutura += "<td class='Alterar'><a href='' data-toggle='modal' data-target='#modalAlterar" + rs.getString("idCadastro")+"'>";
+				estrutura += "<span class='Alterar glyphicon glyphicon-pencil'></a></td>";
+				estrutura += "<td class='Excluir'><a href='' data-toggle='modal' data-target='#modalExcluir" + rs.getInt("idCadastro")+ "'>";
+				estrutura += "<span class='Excluir glyphicon glyphicon-trash'></a></td>";
 				estrutura += "</tr>";
-
 				estrutura += modalExcluir(rs.getString("idCadastro"));
 				estrutura += modalAlterar(rs.getString("idCadastro"));
 			}

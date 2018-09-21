@@ -54,7 +54,7 @@
 	new AlunoDAO().cadastrarAluno(obj);
 	
 	//Redirecionamento
-	response.sendRedirect("../index.jsp");
+	response.sendRedirect("../alunos.jsp");
 	
 	
 %>
