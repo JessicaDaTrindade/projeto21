@@ -8,10 +8,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>COLABORADORES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/style.css" />
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/colaboradores.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/style_projetor.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
+    
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/colaboradores.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/colaboradores_projetor.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/colaboradores_smartphone.css" />
+    
 <script src="main.js"></script>
 
 <!-- JQuery -->
@@ -39,23 +44,17 @@
 
 </head>
 <body>
-<!-- Um Comentario pra ver se foi!  -->
+
 	<main> <!-- MENU -->
 	<section id="menu">
 
 		<ul>
-			<h1>SGE</h1>
-			<li><a href="index.jsp">IN�CIO</a></li>
-			<hr>
-			<li><a href="colaboradores.jsp">COLABORADORES</a></li>
-			<hr>
-			<li><a href="alunos.jsp">ALUNOS</a></li>
-			<hr>
-			<li><a href="materias.jsp">MAT�RIAS</a></li>
-			<hr>
-			<li><a href="turmas.html">TURMAS</a></li>
-			<hr>
-			<li><a href="login.html">SAIR</a></li>
+			<li><a href="index.jsp">IN�CIO</a></li>			
+			<li><a href="colaboradores.jsp">COLABORADORES</a></li>			
+			<li><a href="alunos.jsp">ALUNOS</a></li>			
+			<li><a href="materias.jsp">MAT�RIAS</a></li>			
+			<li><a href="turmas.jsp">TURMAS</a></li>
+			<li><a href="login.jsp">SAIR</a></li>
 
 		</ul>
 
@@ -64,7 +63,7 @@
 	<!-- CONTEÃDO -->
 	<section id="conteudoColaboradores">
 
-		<div id="painelColaboradores">
+		<div id="painel">
 
 			<h1 id="titulo">COLABORADORES</h1>
 
@@ -86,10 +85,6 @@
 					%>
 				</div>
 
-				<!-- BOTÃƒO ALTERAR -->
-				<input type="button" id="btnInferior" value="Alterar">
-				<!-- BOTÃƒO EXLCUIR -->
-				<input type="button" id="btnInferior" value="Excluir">
 
 			</div>
 	</section>
@@ -112,7 +107,8 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 
-					<h4 class="modal-title titulo" id="myModalLabel">CADASTRAR COLABORADOR</h4>
+					<h4 class="modal-title titulo" id="myModalLabel">CADASTRAR
+						COLABORADOR</h4>
 
 				</div>
 				<div class="modal-body">
@@ -121,11 +117,9 @@
 						<form action="acoes/colaboradorAcao.jsp">
 
 							<!-- Cadastrar nome e sobrenome -->
-							<label>
-								Nome <br> <input type="text" name="nome">
-							</label>
-							<label>
-								Sobrenome <br> <input type="text" name="sobrenome">
+							<label> Nome <br> <input type="text" name="nome">
+							</label> <label> Sobrenome <br> <input type="text"
+								name="sobrenome">
 							</label>
 
 							<!-- Cadastrar Sexo  -->
@@ -136,41 +130,38 @@
 
 
 							<!-- Cadastrar RG e CPF  -->
-							<label>
-								RG <br> <input type="text" name="rg">
-							</label>
-							
-							<label>
-								CPF <br> <input type="text" class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00">
+							<label> RG <br> <input type="text" name="rg">
+							</label> <label> CPF <br> <input type="text"
+								class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00">
 							</label>
 
 							<!-- cadastrar data de Nascimento -->
-							<label>
-								Data de nascimento <br> <input type="date" name="dataNascimento">
+							<label> Data de nascimento <br> <input type="date"
+								name="dataNascimento">
 							</label>
-							
-							<!-- Cadastrar eatado civil -->
-							<label>
-								Estado Civil <br> <input type="radio" value="S" name="estadoCivil">
-								Solteiro(a) <input type="radio" value="Casado(a)" name="estadoCivil">
-								Casado(a) <input type="radio" value="Divorciado(a)" name="estadoCivil">
-								Divorciado(a) <input type="radio" value="Viuvo(a)" name="estadoCivil">Viúvo(a)
-							</label> <br>
-							
-							<hr class="separador">
-							
-							<!-- Cadastrar CEP -->
-							<h6 id="titulo2">Endereço</h6>
 
-							<input type="text" name="cep" placeholder="CEP">
-							<input type="text" name="logradouro" placeholder="LOGRADOURO">
+							<!-- Cadastrar eatado civil -->
+							<label> Estado Civil <br> <input type="radio"
+								value="S" name="estadoCivil"> Solteiro(a) <input
+								type="radio" value="Casado(a)" name="estadoCivil">
+								Casado(a) <input type="radio" value="Divorciado(a)"
+								name="estadoCivil"> Divorciado(a) <input type="radio"
+								value="Viuvo(a)" name="estadoCivil">Viúvo(a)
+							</label> <br>
+
+							<hr class="separador">
+
+							<!-- Cadastrar CEP -->
+							<h6 id="titulo2">Endere�o</h6>
+
+							<input type="text" name="cep" placeholder="CEP"> <input
+								type="text" name="logradouro" placeholder="LOGRADOURO">
 							<input type="text" name="numero" placeholder="Nº"> <br>
-							<br> 
-							<input type="text" name="bairro" placeholder="BAIRRO">
+							<br> <input type="text" name="bairro" placeholder="BAIRRO">
 							<input type="text" name="municipio" placeholder="MUNICÍPIO">
 							<input type="text" name="complemento" placeholder="COMPLEMENTO">
 							<hr class="separador">
-							
+
 							<!-- Contato -->
 							</label> <br> <label>Telefone <br> <input type="text"
 								id="name" class="phone-ddd-mask" name="telefone"
@@ -182,54 +173,53 @@
 								placeholder="Ex.: exemplo@gmail.com">
 							</label> <br> <br>
 							<hr class="separador">
-							
-							<!-- CARGO -->		
+
+							<!-- CARGO -->
 							<h6 id="titulo2">Cargo</h6>
-							<label> <br>
-								<input type="radio"	value="Diretor" name="Cargo">Diretor(a) 
-								<input type="radio" value="Professor" name="Cargo" onclick="Mudarestado('minhaDiv')">Professor(a)
+							<label> <br> <input type="radio" value="Diretor"
+								name="Cargo">Diretor(a) <input type="radio"
+								value="Professor" name="Cargo" onclick="Mudarestado('minhaDiv')">Professor(a)
 								<input type="radio" value="Coordenador" name="Cargo">Coordenador(a)
 								<input type="radio" value="Secretário(a)" name="Cargo">Secretário(a)
-								<input type="radio" value="Serviços Gerais" name="Cargo">Serviços Gerais
-								<input type="radio" value="Cozinheiro" name="Cargo">Cozinheiro(a)
+								<input type="radio" value="Serviços Gerais" name="Cargo">Serviços
+								Gerais <input type="radio" value="Cozinheiro" name="Cargo">Cozinheiro(a)
 								<input type="radio" value="Bibliotecário(a)" name="Cargo">Bibliotecário(a)
+							</label> <label>Salario <br> <input type="text"
+								name="Salario" placeholder="0.000,00">
 							</label>
-							<label>Salario <br> <input type="text" name="Salario"
-								placeholder="0.000,00">
-							</label>
-							
+
 							<script>
 								function Mudarestado(el) {
-						        var display = document.getElementById(el).style.display;
-						        if(display == "none")
-						            document.getElementById(el).style.display = 'none';
-						        else
-						            document.getElementById(el).style.display = 'block';
+									var display = document.getElementById(el).style.display;
+									if (display == "none")
+										document.getElementById(el).style.display = 'none';
+									else
+										document.getElementById(el).style.display = 'block';
 								}
 							</script>
-						    
+
 							<div id="minhaDiv">
-							
-							<label> <br>
-								<input type="checkbox"	value="História" name="Cargo">História 
-								<input type="checkbox" value="Matemática" name="Cargo">Matemática
-								<input type="checkbox" value="Física" name="Cargo">Física
-								<input type="checkbox" value="Português" name="Cargo">Português
-								<input type="checkbox" value="Artes" name="Cargo">Artes
-								<input type="checkbox" value="Educação Física" name="Cargo">Educação Física
-								<input type="checkbox" value="Ciências" name="Cargo">Ciências
-								<input type="checkbox"	value="Biologia" name="Cargo">Biologia
-								<input type="checkbox" value="Inglês" name="Cargo">Inglês
-								<input type="checkbox" value="Espanhol" name="Cargo">Espanhol
-								<input type="checkbox" value="Geografia" name="Cargo">Geografia
-								<input type="checkbox" value="Química" name="Cargo">Química
-								<input type="checkbox" value="Sociologia" name="Cargo">Sociologia
-								<input type="checkbox" value="Informática" name="Cargo">Informática
-							</label>
-							
+
+								<label> <br> <input type="checkbox"
+									value="História" name="Cargo">História <input
+									type="checkbox" value="Matemática" name="Cargo">Matemática
+									<input type="checkbox" value="Física" name="Cargo">Física
+									<input type="checkbox" value="Português" name="Cargo">Português
+									<input type="checkbox" value="Artes" name="Cargo">Artes
+									<input type="checkbox" value="Educação Física" name="Cargo">Educação
+									Física <input type="checkbox" value="Ciências" name="Cargo">Ciências
+									<input type="checkbox" value="Biologia" name="Cargo">Biologia
+									<input type="checkbox" value="Inglês" name="Cargo">Inglês
+									<input type="checkbox" value="Espanhol" name="Cargo">Espanhol
+									<input type="checkbox" value="Geografia" name="Cargo">Geografia
+									<input type="checkbox" value="Química" name="Cargo">Química
+									<input type="checkbox" value="Sociologia" name="Cargo">Sociologia
+									<input type="checkbox" value="Informática" name="Cargo">Informática
+								</label>
+
 							</div>
-							
-							
+
+
 
 							<br> <br>
 							<div id="botao">

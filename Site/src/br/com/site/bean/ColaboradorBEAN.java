@@ -6,6 +6,7 @@ public class ColaboradorBEAN {
 	private String nome, sobrenome, sexo, rg, cpf, dataNascimento, estadoCivil, 
     cep, logradouro, numero, bairro, municipio, telefone, 
 	celular, complemento, email, idCargo, salario;
+	private int idCadastro;
 
 	public String getNome() {
 		return nome;
@@ -149,6 +150,14 @@ public class ColaboradorBEAN {
 
 	public void setSalario(String salario) {
 		this.salario = salario;
+	}
+
+	public int getIdCadastro() {
+		return idCadastro;
+	}
+
+	public void setIdCadastro(int idCadastro) {
+		this.idCadastro = idCadastro;
 	}
 	
 	

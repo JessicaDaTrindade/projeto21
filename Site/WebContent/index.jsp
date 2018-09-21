@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/inicio.css" />
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/inicio_projetor.css" />
 
-
 	<!-- Bootstrap -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
