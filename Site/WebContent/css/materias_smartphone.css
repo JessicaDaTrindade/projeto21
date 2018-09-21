@@ -28,6 +28,7 @@
     font-family: minhaFonte;
     border: none;
     border-style: none;
+    outline: none;
 }
 #btnCadastrar:hover{
     background-color: dimgray;

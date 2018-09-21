@@ -7,9 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SGE | Alunos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="css/alunos.css" />
-  <script src="main.js"></script>
+  
+  <!-- CSS -->
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/style.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/style_projetor.css" />
+
+
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/alunos.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/alunos_projetor.css" />
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -44,33 +56,24 @@
     <!-- MENU -->
     <section id="menu">
 
-      <ul>
-        <h1>SGE</h1>
-        <li>
-          <a href="index.jsp">INÍCIO</a>
-        </li>
-        <hr>
-        <li>
-          <a href="colaboradores.jsp">COLABORADORES</a>
-        </li>
-        <hr>
-        <li>
-          <a href="alunos.jsp">ALUNOS</a>
-        </li>
-        <hr>
-        <li>
-          <a href="materias.jsp">MATÉRIAS</a>
-        </li>
-        <hr>
-        <li>
-          <a href="turmas.html">TURMAS</a>
-        </li>
-        <hr>
-        <li>
-          <a href="login.html">SAIR</a>
-        </li>
+      
+   	<ul>
 
-      </ul>
+			<li><a href="index.jsp">INÍCIO</a></li>
+			<!-- <hr> -->
+			<li><a href="colaboradores.jsp">COLABORADORES</a></li>
+			<!-- <hr> -->
+			<li><a href="alunos.jsp">ALUNOS</a></li>
+			<!-- <hr> -->
+			<li><a href="materias.jsp">MATÉRIAS</a></li>
+			<!-- <hr> -->
+			<li><a href="turmas.jsp">TURMAS</a></li>
+			<!-- <hr> -->
+			<li><a href="login.jsp">SAIR</a></li>
+		</ul>
+
+
+      
 
     </section>
 

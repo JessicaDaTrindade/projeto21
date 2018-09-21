@@ -59,6 +59,7 @@
     font-family: minhaFonte;
     border: none;
     border-style: none;
+    outline: none;
 }
 #btnInferior:hover{
     background-color: dimgray;
