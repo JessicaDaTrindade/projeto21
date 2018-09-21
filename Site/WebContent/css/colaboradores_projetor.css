@@ -29,6 +29,7 @@
     font-family: minhaFonte;
     border: none;
     border-style: none;
+    outline: none;
 }
 
 #btnCadastrar:hover{
