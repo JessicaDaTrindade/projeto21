@@ -1,0 +1,87 @@
+@font-face{
+    font-family: "minhaFonte";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+#titulo{
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+    font-size: 50px;
+    text-align: center;
+}
+
+.linha{
+    border-color: rgb(63, 63, 63);
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES */
+#btnCadastrar{
+    background: #333333;
+    width: 90%;
+    margin: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+
+#btnCadastrar:hover{
+    background-color: dimgray;
+    
+}
+
+#btnInferior{
+    background: #333333;
+    width: 20%;
+    margin: auto 80px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px;
+    font-family: minhaFonte;
+    border: none;
+    border-style: none;
+}
+
+#colaboradores{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+/* PAINEL */
+#painel h1{
+    font-family: minhaFonte;
+    color: rgb(63, 63, 63);
+}
+#painel hr{
+    border-color: dimgray;
+    width: 80%;
+}
+/* DIV LISTA */
+#divLista{
+    margin:10px auto;
+    width: 90%;
+    height: 350px;
+    margin-bottom: 40px;
+    overflow: auto;
+}
+.estiloModal input[type="submit"]{
+	font-family: minhaFonte;
+	font-size: 20px ;
+	width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center ;
+    background: #333333;
+    color: white;
+}
