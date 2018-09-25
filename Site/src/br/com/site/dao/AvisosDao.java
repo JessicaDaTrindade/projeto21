@@ -23,7 +23,7 @@ public class AvisosDao {
 			try {
 
 				// SQL
-				String sql = "INSERT INTO avisos (avisos) VALUES (?)";
+				String sql = "INSERT INTO avisos VALUES (null, ?)";
 
 				// Preparar a conexão
 				PreparedStatement pstmt = conexao.prepareStatement(sql);
@@ -31,11 +31,11 @@ public class AvisosDao {
 				// Parâmetros
 				pstmt.setString(1, obj.getAvisos());
 			
-			// Executar comando
-			pstmt.execute();
-			System.out.println("ok "+obj.getAvisos());
+				// Executar comando
+				pstmt.execute();
+
 		} catch (Exception e) {
-			System.out.println("Falha ao cadastrar " + e.getMessage());
+			System.out.println("Falha ao cadastrar aviso" + e.getMessage());
 		
 			}
 		}

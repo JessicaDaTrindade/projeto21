@@ -38,7 +38,11 @@
 	crossorigin="anonymous"></script>
 	
 	
-
+<script language="javascript">
+function enviarAviso(){
+	document.getElementById("frmAvisos").submit();
+}
+</script>
 </head>
 <body>
     
@@ -99,14 +103,18 @@
 					
 					
 						if (user.getCargo() == 1) {
-							out.print(
-									"<li><form action='acoes/avisosAcao.jsp'><input type='text' name='avisos' id='avisos' placeholder='Cadastrar avisos'></li>"
-									+"<input type=image src='img/correct.png' width='30' height='30' class='submit'></form></li>");
 							
+								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");
+								out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
+								out.print("<a href='#' onclick='javascript:enviarAviso();'><span class='glyphicon glyphicon-ok'></a>");
+								out.print("</form>");
+									
 							
 						} else if (user.getCargo() == 3) {
-							out.print(
-							"<li><input id='avisos' type='text' name='avisos' ></li>");
+							out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");
+							out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
+							out.print("<a href='#' onclick='javascript:enviarAviso();'><span class='glyphicon glyphicon-ok'></a>");
+							out.print("</form>");								
 									
 						}
 					%>

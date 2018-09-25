@@ -2,7 +2,7 @@
 
 <%
 	//Obter os dados do aluno
-	String avisos = request.getParameter("avisos");
+	String avisos = request.getParameter("txtAvisos");
 
 	
 	//Cria um objeto aluno
