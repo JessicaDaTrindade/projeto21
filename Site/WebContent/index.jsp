@@ -36,6 +36,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+	
+	
 
 </head>
 <body>
@@ -98,7 +100,10 @@
 					
 						if (user.getCargo() == 1) {
 							out.print(
-									"<li><input id='avisos' type='text' name='avisos' placeholder='Cadastrar avisos' ><a href=''><span class='enviarAvisos glyphicon glyphicon-ok'></a></li>");
+									"<li><form action='acoes/avisosAcao.jsp'><input type='text' name='avisos' id='avisos' placeholder='Cadastrar avisos'></li>"
+									+"<input type=image src='img/correct.png' width='30' height='30' class='submit'></form></li>");
+							
+							
 						} else if (user.getCargo() == 3) {
 							out.print(
 							"<li><input id='avisos' type='text' name='avisos' ></li>");

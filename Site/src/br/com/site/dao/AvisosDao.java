@@ -1,12 +1,8 @@
 package br.com.site.dao;
 
-
 //IMPORTATAR
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import br.com.site.bean.AlunoBEAN;
 import br.com.site.bean.AvisosBean;
 import br.com.site.connection.Conexao;
 
@@ -27,7 +23,7 @@ public class AvisosDao {
 			try {
 
 				// SQL
-				String sql = "INSERT INTO avisos (avisos) VALUES "+"( ?,)";
+				String sql = "INSERT INTO avisos (avisos) VALUES (?)";
 
 				// Preparar a conexão
 				PreparedStatement pstmt = conexao.prepareStatement(sql);
@@ -37,7 +33,7 @@ public class AvisosDao {
 			
 			// Executar comando
 			pstmt.execute();
-			System.out.println("ok");
+			System.out.println("ok "+obj.getAvisos());
 		} catch (Exception e) {
 			System.out.println("Falha ao cadastrar " + e.getMessage());
 		

@@ -103,16 +103,22 @@ footer{
 }
 /*CSS quadro de avisos*/
 #avisos{
-	width: 900px;
+	width: 1000px;
     border-radius: 10px;
     padding: 20px;
     text-align: left ;
+    margin-top: 30px;
     outline: none;	
 }
-.enviarAvisos{
-	margin: auto;
-	text-align: center;
-	width: 20px;
+
+
+.submit{
+	background: none;
+	border: none;
+	outline: none;
+	margin-top: 20px;
 	
-}
 	
+	
+	
+}	
