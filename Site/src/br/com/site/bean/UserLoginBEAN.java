@@ -4,10 +4,18 @@ public class UserLoginBEAN {
 	
 	//Atrib
 	private String usuario, senha;
-	private int cargo;
+	private int cargo, codFunc;
 	
 
 	
+	public int getCodFunc() {
+		return codFunc;
+	}
+
+	public void setCodFunc(int codFunc) {
+		this.codFunc = codFunc;
+	}
+
 	public int getCargo() {
 		return cargo;
 	}

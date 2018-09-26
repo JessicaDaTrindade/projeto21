@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import br.com.site.connection.Conexao;
 
@@ -77,6 +78,42 @@ public class TurmaDAO {
 		return estrutura;
 	}
 	
+	//Listar Turmas de Determinado Professor
+	public ArrayList turmasProfessor(String idProfessor){
+	
+		ArrayList<String> turmasProfessor = new ArrayList();
+		
+		try {
+			
+			//SQL
+			String sql = "SELECT turmas.nomeTurma FROM turmas\r\n" + 
+					"INNER JOIN leciona ON (leciona.idTurma = turmas.idTurma)\r\n" + 
+					"INNER JOIN cadastrofuncionarios ON (leciona.idFuncionario = cadastrofuncionarios.idCadastro)\r\n" + 
+					"WHERE cadastrofuncionarios.idCadastro = ?";
+			
+			//PREPARAR CONEXÃO
+			PreparedStatement pstmt = conexao.prepareStatement(sql);
+			
+			//PARÂMETROS
+			pstmt.setString(1, idProfessor);
+			
+			//EXECUTAR COMANDO
+			ResultSet rs = pstmt.executeQuery();
+			
+			//LAÇO
+			while(rs.next()) {
+		
+				turmasProfessor.add(rs.getString(1));
+			}
+			
+		}catch (Exception e) {
+			System.out.println("Erro ao listar turmas: "+e);
+		}
+		
+		return turmasProfessor;
+	}
+	
+	
 	//Método modal detalhes
 	public String modalDetalhes(String idTurma) {
 		
@@ -99,5 +136,22 @@ public class TurmaDAO {
 			estrutura+="</div><!-- /.modal -->";
 			
 			return estrutura;
+	}
+	
+	//Método montar select turmas professor
+	public String selectTurmasProf(String idProfessor) {
+	
+		String estrutura = "";
+		
+		ArrayList<String> Turmas = new ArrayList();
+		Turmas = turmasProfessor(idProfessor);
+		
+		for(int i=0; i<Turmas.size(); i++) {
+			
+			estrutura += "<option value="+i+">"+Turmas.get(i)+"</option>";
+			
+		}
+		
+		return estrutura;		
 	}
 }

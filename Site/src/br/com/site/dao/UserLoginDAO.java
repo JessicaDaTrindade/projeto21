@@ -27,7 +27,7 @@ public class UserLoginDAO {
 		try {
 			
 			//SQL
-			String sql = "SELECT idCargo, cpf, senhaFuncionario FROM cadastroFuncionarios WHERE cpf = ? AND senhaFuncionario = ?";
+			String sql = "SELECT idCargo, cpf, senhaFuncionario, idCadastro FROM cadastroFuncionarios WHERE cpf = ? AND senhaFuncionario = ?";
 			
 			//Preparar conexão
 			PreparedStatement pstmt = this.conexao.prepareStatement(sql);
@@ -46,6 +46,7 @@ public class UserLoginDAO {
 			obj.setCargo(rs.getInt(1));
 			obj.setUsuario(rs.getString(2));
 			obj.setSenha(rs.getString(3));
+			obj.setCodFunc(rs.getInt(4));
 			
 			
 		}catch(Exception e) {

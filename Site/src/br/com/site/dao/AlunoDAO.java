@@ -409,5 +409,55 @@ public class AlunoDAO {
 		}
 
 	}
+	
+	//Amilton
+	//Mètodo listar alunos de determinado professor
+	public String listarAlunosProf(String idProfessor) {
+		
+		String estrutura = "<table class='table table-striped'>";
+		estrutura += "<thead>";
+		estrutura += "<tr>";
+		estrutura += "<th class='celulaCod'>Código</th>"; 
+		estrutura += "<th class='celulaMateria'>Nome</th>";
+		estrutura += "<th class='celulaAlterar'>Alterar</th>"; 
+		estrutura += "<th class='celulaExcluir'>Excluir</th>";
+		estrutura += "</tr>";
+		estrutura += "</thead>";
+		estrutura += "<tbody>";
+		
+		try {
+			
+			String sql = "SELECT alunos.idAluno, cadastrosalunos.nome FROM alunos\r\n" + 
+					"INNER JOIN cadastrosalunos ON (cadastrosalunos.idCadastro = alunos.idCadastro)\r\n" + 
+					"INNER JOIN turmas ON (alunos.idTurma = turmas.idTurma)\r\n" + 
+					"INNER JOIN leciona ON (leciona.idTurma = turmas.idTurma)\r\n" + 
+					"INNER JOIN cadastrofuncionarios ON (cadastrofuncionarios.idCadastro = leciona.idFuncionario)\r\n" + 
+					"WHERE cadastrofuncionarios.idCadastro = ?";
+			
+			PreparedStatement pstmt = conexao.prepareStatement(sql);
+			
+			pstmt.setString(1, idProfessor);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				
+				estrutura += "<tr>";	
+				estrutura += "<td class=''>"+rs.getString(1)+"</td>";
+				estrutura += "<td class=''>"+rs.getString(2)+"</a></td>";				
+				estrutura += "</tr>";
+				
+			
+			}
+			
+			estrutura += "</tbody>";
+			estrutura += "</table>";
+			
+		}catch (Exception e) {
+			System.out.println("Falha ao listar alunos: "+e);
+		}
+		return estrutura;	
+	}
+	
 
 }
