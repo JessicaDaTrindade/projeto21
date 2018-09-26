@@ -1,4 +1,6 @@
 <!-- IMPORTAR CLASSES JAVA  -->
+<%@page import="br.com.site.dao.AvisosDao"%>
+<%@page import="br.com.site.dao.AlunoDAO"%>
 <%@page import="br.com.site.bean.UserLoginBEAN"%>
 <%@ page import="br.com.site.connection.*"%>
 <!DOCTYPE html>
@@ -41,6 +43,11 @@
 <script language="javascript">
 function enviarAviso(){
 	document.getElementById("frmAvisos").submit();
+}
+</script>
+<script language="javascript">
+function alterarAviso(){
+	document.getElementById("frmAlterarAvisos").submit();
 }
 </script>
 </head>
@@ -89,7 +96,17 @@ function enviarAviso(){
 
                 <div class="card">
                     <div class="container">
-                          <h4 id="not">Aqui vão as notificações da escola. E qualquer outra porcaria que você queira ler!</h4> 
+                          <h4 id="not">
+                          <!-- listar Avisos -->
+        			
+
+          <%
+          	out.print(new AvisosDao().listarAvisos());
+          	
+          %>
+
+        </div>
+                          </h4> 
                     </div>
                 </div>
 
@@ -103,18 +120,22 @@ function enviarAviso(){
 					
 					
 						if (user.getCargo() == 1) {
-							
-								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");
+								
+								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");  
 								out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
-								out.print("<a href='#' onclick='javascript:enviarAviso();'><span class='glyphicon glyphicon-ok'></a>");
+								out.print("<li><a href='#' onclick='javascript:enviarAviso();'><span class='Enviar glyphicon glyphicon-ok'> Enviar</a></li>");
 								out.print("</form>");
-									
+								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/alterarAvisos.jsp'>");
+								out.print("<li><a href='#' onclick='javascript:alterarAviso();'><span class='Alterar glyphicon glyphicon-list-alt'> Alterar/Excluir</a></li>");
+								out.print("</form>");
 							
 						} else if (user.getCargo() == 3) {
-							out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");
+							
+							out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");  
 							out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
-							out.print("<a href='#' onclick='javascript:enviarAviso();'><span class='glyphicon glyphicon-ok'></a>");
-							out.print("</form>");								
+							out.print("<li><a href='#' onclick='javascript:enviarAviso();'><span class='Enviar glyphicon glyphicon-ok'> Enviar</a></li>");
+							out.print("<li><a href='#' onclick='javascript:alterarAviso();'><span class='Alterar glyphicon glyphicon-list-alt'> Alterar/Excluir</a></li>");
+							out.print("</form>");						
 									
 						}
 					%>

@@ -113,10 +113,7 @@
 
       </div>
 
-      <!-- BOTÃO ALTERAR 
-      <input type="button" id="btnInferior" value="Alterar">
-        BOTÃO EXLCUIR 
-      <input type="button" id="btnInferior" value="Excluir"> -->
+
 
     </section>
 

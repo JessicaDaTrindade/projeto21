@@ -3,6 +3,10 @@ package br.com.site.dao;
 //IMPORTATAR
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import br.com.site.bean.AlunoBEAN;
 import br.com.site.bean.AvisosBean;
 import br.com.site.connection.Conexao;
 
@@ -40,4 +44,30 @@ public class AvisosDao {
 			}
 		}
 		
+		// Metodo para selecionar alunos
+		public String listarAvisos() {
+
+			// SQL
+			String sql = "select * From avisos";
+
+			
+			try {
+				Statement stmt = conexao.createStatement();
+
+				ResultSet rs = stmt.executeQuery(sql);
+
+				while (rs.next()) {
+
+					
+					
+				}
+
+			} catch (Exception e) {
+
+			}
+
+			return sql;
+			
+		}
+
 }

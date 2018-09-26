@@ -102,23 +102,20 @@ footer{
 	display: none;
 }
 /*CSS quadro de avisos*/
-#avisos{
-	width: 1000px;
+#txtAvisos{
+	width: 900px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     text-align: left ;
     margin-top: 30px;
     outline: none;	
 }
 
-
-.submit{
-	background: none;
-	border: none;
-	outline: none;
-	margin-top: 20px;
-	
-	
-	
-	
-}	
+.Enviar{
+	font-size: 20px;
+	text-align: left;
+}
+.Alterar{
+	font-size: 20px;
+	text-align: left;
+}
