@@ -414,13 +414,12 @@ public class AlunoDAO {
 	//Mètodo listar alunos de determinado professor
 	public String listarAlunosProf(String idProfessor) {
 		
-		String estrutura = "<table class='table table-striped'>";
+		String estrutura = "<table class='table table-striped tblAlunoNota'>";
 		estrutura += "<thead>";
 		estrutura += "<tr>";
-		estrutura += "<th class='celulaCod'>Código</th>"; 
-		estrutura += "<th class='celulaMateria'>Nome</th>";
-		estrutura += "<th class='celulaAlterar'>Alterar</th>"; 
-		estrutura += "<th class='celulaExcluir'>Excluir</th>";
+		estrutura += "<th class='codAlunoNota'>Matrícula</th>"; 
+		estrutura += "<th class='nomeAlunoNota'>Nome</th>";
+		estrutura += "<th class='lancaNota'>Lançar</th>";
 		estrutura += "</tr>";
 		estrutura += "</thead>";
 		estrutura += "<tbody>";
@@ -443,9 +442,14 @@ public class AlunoDAO {
 			while(rs.next()){
 				
 				estrutura += "<tr>";	
-				estrutura += "<td class=''>"+rs.getString(1)+"</td>";
-				estrutura += "<td class=''>"+rs.getString(2)+"</a></td>";				
-				estrutura += "</tr>";
+				estrutura += "<td class='codAlunoNota'>"+rs.getString(1)+"</td>";
+				estrutura += "<td class='nomeAlunoNota'>"+rs.getString(2)+"</a></td>";
+				estrutura += "<td class='lancaNota'>";
+				estrutura += "<a href='#'><span class='glyphicon glyphicon-plus' alt='Lançar nota'></a>";
+				estrutura += "<a href='#'><span class='glyphicon glyphicon-pencil' alt='Lançar nota'></a>";
+				estrutura += "</td>";
+				
+				estrutura += "</tr>";  
 				
 			
 			}
