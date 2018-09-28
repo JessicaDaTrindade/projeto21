@@ -3,22 +3,30 @@
 <html>
 <head>
 <!-- verificar sessão -->
-<%@include file = "include/incSessao.jsp"%>
+<%@include file="include/incSessao.jsp"%>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SGE - TURMAS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="main.js"></script>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>SGE - TURMAS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="main.js"></script>
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/style.css" />
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/style_projetor.css" />
-<link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/style.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/style_projetor.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
 
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/turmas.css" />
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/turmas_projetor.css" />
-<link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/turmas.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/turmas_projetor.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (max-width: 480px)" href="" />
 
 <!-- JQuery -->
 <script
@@ -26,26 +34,33 @@
 
 <!-- Boostrap CSSS -->
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
 
 
 </head>
 <body>
-    
-    <main>
-        
-        <!-- MENU -->
-        <section id="menu">
 
-            <ul>
-            
-<%
+	<main> <!-- MENU -->
+	<section id="menu">
+
+		<ul>
+
+			<%
 	
 
 	if (user.getCargo() == 1) {
@@ -57,37 +72,37 @@
 	}
 %>
 
-            </ul>
+		</ul>
 
-        </section>
-        
-        <!-- CONTEÚDO -->
-        <section id="conteudoTurmas">
+	</section>
 
-            <div id="painelTurmas">
+	<!-- CONTEÚDO -->
+	<section id="conteudoTurmas">
 
-                <h1 id="titulo">TURMAS</h1>
+		<div id="painelTurmas">
 
-                <hr class="linha">
+			<h1 id="titulo">TURMAS</h1>
 
-				<!-- Modelo Link -->
-                <!--<a href="https://comps.canstockphoto.com.br/selo-testado-aprovado-imagem_csp20208679.jpg" class="btn btn-green"><h4 id="subtitulo">1ºano - a</h4></a>-->
-                
-                 <% out.print(new TurmaDAO().listarTurma());%>
-               
+			<hr class="linha">
 
-                
-            </div>
-            
+			<!-- Modelo Link -->
+			<!--<a href="https://comps.canstockphoto.com.br/selo-testado-aprovado-imagem_csp20208679.jpg" class="btn btn-green"><h4 id="subtitulo">1ºano - a</h4></a>-->
 
-        </section>
-
-        
+			<% out.print(new TurmaDAO().listarTurma());%>
 
 
-    </main>
 
-    <footer> E21 - 2018 </footer>
+		</div>
+
+
+	</section>
+
+
+
+
+	</main>
+
+	<footer> E21 - 2018 </footer>
 
 </body>
 </html>

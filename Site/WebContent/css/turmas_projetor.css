@@ -1,54 +1,54 @@
-#titulo{
-    font-family: minhaFonte;
-    color: rgb(63, 63, 63);
-    font-size: 50px;  
-    text-align: center;   
+#titulo {
+	font-family: minhaFonte;
+	color: rgb(63, 63, 63);
+	font-size: 50px;
+	text-align: center;
 }
 
-.linha{
-    border-color: rgb(63, 63, 63);
-    width: 800px;
+.linha {
+	border-color: rgb(63, 63, 63);
+	width: 800px;
 }
 
-.btn{
-    font-family: minhaFonte; 
-    width: 150px; 
-    height: 100px;
-    display: block;
-    margin: 10px;
+.btn {
+	font-family: minhaFonte;
+	width: 150px;
+	height: 100px;
+	display: block;
+	margin: 10px;
 }
 
-#subtitulo{
-    color: #2B3C51;
-    font-size: 30px;
-    padding: 18px;
+#subtitulo {
+	color: #2B3C51;
+	font-size: 30px;
+	padding: 18px;
 }
 
-.image{
-    padding: 10px 10px;
-    opacity: 0.3;
+.image {
+	padding: 10px 10px;
+	opacity: 0.3;
 }
 
-.btn-green{
-    background: rgb(146, 204, 243);
+.btn-green {
+	background: rgb(146, 204, 243);
 }
 
-.btn-green:hover{
-    background: rgb(181, 223, 252);
+.btn-green:hover {
+	background: rgb(181, 223, 252);
 }
 
-#conteudoTurmas{
-    width: 100%;
-    background-color: #EFEFEF;
-    height: 600px;
+#conteudoTurmas {
+	width: 100%;
+	background-color: #EFEFEF;
+	height: 600px;
 }
 
-#painelTurmas{
+#painelTurmas {
 	margin: auto;
 	padding: 5px;
-    text-align: center;
-    background-color: #EFEFEF;
-    height: 500px;
-    width: 80%;
-    overflow: auto;
+	text-align: center;
+	background-color: #EFEFEF;
+	height: 500px;
+	width: 80%;
+	overflow: auto;
 }

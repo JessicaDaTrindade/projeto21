@@ -1,142 +1,153 @@
-@font-face{
-    font-family: "minhaFonte";
-    src: url("../fonts/BebasNeue-Regular.otf");
+@font-face {
+	font-family: "minhaFonte";
+	src: url("../fonts/BebasNeue-Regular.otf");
 }
 
-#titulo{
-    font-family: minhaFonte;
-    text-align: center;
-    color: rgb(63, 63, 63);
-    font-size: 70px;    
+#titulo {
+	font-family: minhaFonte;
+	text-align: center;
+	color: rgb(63, 63, 63);
+	font-size: 70px;
 }
 
-.linha{
-    border-color: rgb(63, 63, 63);
-    width: 800px;
+.linha {
+	border-color: rgb(63, 63, 63);
+	width: 800px;
 }
 
 /* BOTÕES */
-#btnCadastrar{
-    background: #333333;
-    width: 1000px;
-    margin: auto;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    border-radius: 10px;
-    font-family: minhaFonte;
-    border: none;
-    border-style: none;
-    outline: none;
+#btnCadastrar {
+	background: #333333;
+	width: 1000px;
+	margin: auto;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 10px;
+	font-family: minhaFonte;
+	border: none;
+	border-style: none;
+	outline: none;
 }
-#btnCadastrar:hover{
-    background-color: dimgray;
-    
+
+#btnCadastrar:hover {
+	background-color: dimgray;
 }
-#btnInferior{
-    background: #333333;
-    width: 200px;
-    margin: auto 80px;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    border-radius: 10px;
-    font-family: minhaFonte;
-    border: none;
-    border-style: none;
+
+#btnInferior {
+	background: #333333;
+	width: 200px;
+	margin: auto 80px;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 10px;
+	font-family: minhaFonte;
+	border: none;
+	border-style: none;
 }
-#btnInferior:hover{
-    background-color: dimgray;
+
+#btnInferior:hover {
+	background-color: dimgray;
 }
 
 /* CONTEÚDO */
 
 /* DIV MATÉRIAS */
-#materias{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: auto;
-}
-/* PAINEL */
-#painel h1{
-    font-family: minhaFonte;
-    color: rgb(63, 63, 63);
-    font-size: 70px; 
-}
-#painel hr{
-    border-color: dimgray;
-    width: 80%;
-}
-/* DIV LISTA */
-#divLista{
-    margin:10px auto;
-    width: 1000px;
-    height: 350px;
-    margin-bottom: 40px;
-    overflow: auto;
-    
-   
-}
-/* LISTA */
-.listaMaterias{
+#materias {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	text-align: center;
 	margin: auto;
 }
-.listaMaterias thead{
+/* PAINEL */
+#painel h1 {
+	font-family: minhaFonte;
+	color: rgb(63, 63, 63);
+	font-size: 70px;
+}
 
+#painel hr {
+	border-color: dimgray;
+	width: 80%;
 }
-.listaMaterias tbody{
+/* DIV LISTA */
+#divLista {
+	margin: 10px auto;
+	width: 1000px;
+	height: 350px;
+	margin-bottom: 40px;
+	overflow: auto;
+}
+/* LISTA */
+.listaMaterias {
+	margin: auto;
+}
 
+.listaMaterias thead {
+	
 }
-.listaMaterias td{
-	text-align:center;	
-    height: 40px;
+
+.listaMaterias tbody {
+	
 }
-.listaMaterias th{
-    height: 40px;
-    text-align: center;
+
+.listaMaterias td {
+	text-align: center;
+	height: 40px;
 }
-.listaMaterias tr{
-	text-align:center;	
-    border-radius: 10px;
+
+.listaMaterias th {
+	height: 40px;
+	text-align: center;
 }
-.listaMaterias tr{
-   	text-align:center;	
-    border-radius: 10px;
+
+.listaMaterias tr {
+	text-align: center;
+	border-radius: 10px;
 }
-.listaMaterias tr:nth-child(even){
-    background-color: #EFEFEF;
+
+.listaMaterias tr {
+	text-align: center;
+	border-radius: 10px;
 }
-.listaMaterias tr:nth-child(odd){
-    background-color:rgb(204, 204, 204);    
+
+.listaMaterias tr:nth-child(even) {
+	background-color: #EFEFEF;
+}
+
+.listaMaterias tr:nth-child(odd) {
+	background-color: rgb(204, 204, 204);
 }
 
 /* ESTILO CELULAS TABELA DETALHES MAT�RIA */
-.celulaCod{
+.celulaCod {
 	text-align: Center;
 	width: 20px;
 }
-.celulaMateria{
-	text-align:center;
 
+.celulaMateria {
+	text-align: center;
 }
-.celulaCod{
+
+.celulaCod {
 	text-align: Center;
 	width: 20px;
 }
-.celulaMateria{
-	text-align:center;
 
-}
-.celulaAlterar{
+.celulaMateria {
 	text-align: center;
-	width: 20px;
 }
-.celulaExcluir{
+
+.celulaAlterar {
 	text-align: center;
 	width: 20px;
 }
 
+.celulaExcluir {
+	text-align: center;
+	width: 20px;
+}

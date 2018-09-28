@@ -54,8 +54,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
-	
-	</head>
+
+</head>
 
 <body>
 
@@ -86,7 +86,7 @@
 
 		<div id="nota">
 
-<br>
+			<br>
 			<h1 id="titulo">NOTAS</h1>
 			<hr class="separador">
 
@@ -96,28 +96,37 @@
 				<div id="areaNotas">
 
 					<div id="legenda">
-				<p><span class='glyphicon glyphicon-plus' alt='Lançar nota'>	Clique neste icone para lançar as notas no
-					sistema.</p>
-				<p><sapn class="glyphicon glyphicon-pencil">	Clique neste icone para alterar as notas que
-					estão registradas no sistema.</p>
-				<p><span class='glyphicon glyphicon-trash' alt='Excluir'>	Clique neste icone para Excluir as notas que
-					estão regostradas no sistema.</p>
-			</div>
-			<br><br>
+						<p>
+							<span class='glyphicon glyphicon-plus' alt='Lançar nota'>
+								Clique neste icone para lançar as notas no sistema.
+						</p>
+						<p>
+							<sapn class="glyphicon glyphicon-pencil"> Clique neste
+							icone para alterar as notas que estão registradas no sistema.
+						</p>
+						<p>
+							<span class='glyphicon glyphicon-trash' alt='Excluir'>
+								Clique neste icone para Excluir as notas que estão regostradas
+								no sistema.
+						</p>
+					</div>
+					<br>
+					<br>
 					<form id="frmNotas">
 						<div id="filtTurma">
-						<select name="frmTurmas" form="frmNotas">
-						<option value="-1">Selecionar Turma</option>
-							<% 
+							<select name="frmTurmas" form="frmNotas">
+								<option value="-1">Selecionar Turma</option>
+								<% 
 							String funcionarioLogado = String.valueOf(user.getCodFunc());
 							out.print(new TurmaDAO().selectTurmasProf(funcionarioLogado));
 							%>
-						</select>
-						<p>Filtrar turmas</p>
+							</select>
+							<p>Filtrar turmas</p>
 						</div>
 
 					</form>
-					<br><br>
+					<br>
+					<br>
 					<% out.print(new AlunoDAO().listarAlunosProf(funcionarioLogado)); %>
 
 				</div>

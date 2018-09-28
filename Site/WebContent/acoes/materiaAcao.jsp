@@ -1,5 +1,5 @@
 <%@page import="java.sql.Date"%>
-<%@page import="br.com.site.bean.*, br.com.site.dao.*" %>
+<%@page import="br.com.site.bean.*, br.com.site.dao.*"%>
 
 <%
 	//Obter dados matéria

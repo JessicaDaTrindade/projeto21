@@ -1,117 +1,123 @@
-@font-face{
-    font-family: "minhaFonte";
-    src: url("../fonts/BebasNeue-Regular.otf");
+@font-face {
+	font-family: "minhaFonte";
+	src: url("../fonts/BebasNeue-Regular.otf");
 }
 
-#titulo{
-    font-family: minhaFonte;
-    color: rgb(63, 63, 63);
-    font-size: 50px;  
-    text-align: center;   
+#titulo {
+	font-family: minhaFonte;
+	color: rgb(63, 63, 63);
+	font-size: 50px;
+	text-align: center;
 }
 
-.linha{
-    border-color: rgb(63, 63, 63);
-    width: 800px;
-    margin-bottom: 20px;
+.linha {
+	border-color: rgb(63, 63, 63);
+	width: 800px;
+	margin-bottom: 20px;
 }
 
 /* BOTÃ•ES */
-#btnCadastrar{
-    background: #333333;
-    width: 90%;
-    margin: auto;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    border-radius: 10px;
-    font-family: minhaFonte;
-    border: none;
-    border-style: none;
-    outline: none;
+#btnCadastrar {
+	background: #333333;
+	width: 90%;
+	margin: auto;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 10px;
+	font-family: minhaFonte;
+	border: none;
+	border-style: none;
+	outline: none;
 }
-#btnCadastrar:hover{
-    background-color: dimgray;
-    
+
+#btnCadastrar:hover {
+	background-color: dimgray;
 }
-#btnInferior{
-    background: #333333;
-    width: 20%;
-    margin: auto 80px;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 26px;
-    border-radius: 10px;
-    font-family: minhaFonte;
-    border: none;
-    border-style: none;
+
+#btnInferior {
+	background: #333333;
+	width: 20%;
+	margin: auto 80px;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 10px;
+	font-family: minhaFonte;
+	border: none;
+	border-style: none;
 }
-#btnInferior:hover{
-    background-color: dimgray;
+
+#btnInferior:hover {
+	background-color: dimgray;
 }
 
 /* CONTEÃšDO */
 
 /* DIV MATÃ‰RIAS */
-#materias{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: auto;
+#materias {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	text-align: center;
+	margin: auto;
 }
 /* PAINEL */
-#painel h1{
-    font-family: minhaFonte;
-    color: rgb(63, 63, 63);
-
+#painel h1 {
+	font-family: minhaFonte;
+	color: rgb(63, 63, 63);
 }
-#painel hr{
-    border-color: dimgray;
-    width: 80%;
+
+#painel hr {
+	border-color: dimgray;
+	width: 80%;
 }
 /* DIV LISTA */
-#divLista{
-    margin:10px auto;
-    width: 90%;
-    height: 350px;
-    margin-bottom: 40px;
-    overflow: auto;
+#divLista {
+	margin: 10px auto;
+	width: 90%;
+	height: 350px;
+	margin-bottom: 40px;
+	overflow: auto;
 }
-/* ESTILO CELULAS TABELA DETALHES MATÉRIA */ 
-.celulaCod{
+/* ESTILO CELULAS TABELA DETALHES MATÉRIA */
+.celulaCod {
 	text-align: Center;
 	width: 20px;
 }
-.celulaMateria{
-	text-align:center;
 
+.celulaMateria {
+	text-align: center;
 }
-.celulaCod{
+
+.celulaCod {
 	text-align: Center;
 	width: 20px;
 }
-.celulaMateria{
-	text-align:center;
 
+.celulaMateria {
+	text-align: center;
 }
-.celulaAlterar{
+
+.celulaAlterar {
 	text-align: center;
 	width: 20px;
 }
-.celulaExcluir{
+
+.celulaExcluir {
 	text-align: center;
 	width: 20px;
 }
-.fieldObrigatorio{
+
+.fieldObrigatorio {
 	font-size: 10px;
 	text-color: red;
 	color: red;
 	display: none;
 }
 
-#notas{
+#notas {
 	padding: 40px;
 }

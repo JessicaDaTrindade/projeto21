@@ -1,69 +1,68 @@
-@font-face{
-    font-family: "minhaFonte";
-    src: url("../fonts/BebasNeue-Regular.otf");
+@font-face {
+	font-family: "minhaFonte";
+	src: url("../fonts/BebasNeue-Regular.otf");
 }
 
-
-#titulo{
-    font-family: minhaFonte;
-    color: rgb(63, 63, 63);
-    font-size: 70px;    
+#titulo {
+	font-family: minhaFonte;
+	color: rgb(63, 63, 63);
+	font-size: 70px;
 }
 
-.linha{
-    border-color: rgb(63, 63, 63);
-    width: 800px;
+.linha {
+	border-color: rgb(63, 63, 63);
+	width: 800px;
 }
 
-#subtitulo{
-    font-family: minhaFonte;
-    padding-top: 25px;
-    color: rgb(63, 63, 63);
-    font-size: 25px;
+#subtitulo {
+	font-family: minhaFonte;
+	padding-top: 25px;
+	color: rgb(63, 63, 63);
+	font-size: 25px;
 }
 
-#conteudoInicio{
-    float: right;
-    width: 80%;
-    padding-bottom: 33px;
-    background-color: #EFEFEF;
+#conteudoInicio {
+	float: right;
+	width: 80%;
+	padding-bottom: 33px;
+	background-color: #EFEFEF;
 }
 
-#painelInicio{
-    margin-bottom: 70px;
-    text-align: center;
-    padding: 40px;
-    background-color: #EFEFEF;
+#painelInicio {
+	margin-bottom: 70px;
+	text-align: center;
+	padding: 40px;
+	background-color: #EFEFEF;
 }
 
-#not{
-    text-align: center;
+#not {
+	text-align: center;
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    border-radius: 10px;    
-    background-color: rgb(253, 253, 253);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+	/* Add shadows to create the "card" effect */
+	border-radius: 10px;
+	background-color: rgb(253, 253, 253);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    border-radius: 10px;    
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	border-radius: 10px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
-    padding: 15px 16px;
+	padding: 15px 16px;
 }
 
-#calendario{
-    background-color: rgb(150, 150, 150);
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    width: 1000px;
-    height: 650px;
+#calendario {
+	background-color: rgb(150, 150, 150);
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	width: 1000px;
+	height: 650px;
 }

@@ -1,4 +1,5 @@
- <%@page import="br.com.site.dao.AlunoDAO"%>
+
+<%@page import="br.com.site.dao.AlunoDAO"%>
 <%
 				//Obter dados do idCdastro
           	    int idCadastro = Integer.parseInt(request.getParameter("idCadastro"));
@@ -11,4 +12,3 @@
           	
           	
   %>
-  

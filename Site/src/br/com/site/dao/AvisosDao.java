@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import br.com.site.bean.AlunoBEAN;
 import br.com.site.bean.AvisosBean;
 import br.com.site.connection.Conexao;
 
@@ -22,8 +21,10 @@ public class AvisosDao {
 	
 	// Método de cadastro
 		public void cadastrarAvisos(AvisosBean obj) {
+			
+			
 
-			// Tentar realizar o cadastro do aluno
+			// Tentar realizar o cadastro do aviso
 			try {
 
 				// SQL
@@ -39,34 +40,40 @@ public class AvisosDao {
 				pstmt.execute();
 
 		} catch (Exception e) {
-			System.out.println("Falha ao cadastrar aviso" + e.getMessage());
+			System.out.println("Falha ao listar avisos: "+e);
 		
 			}
 		}
 		
-		// Metodo para selecionar alunos
+		// Metodo para selecionar avisos
 		public String listarAvisos() {
+			
+			String listarAvisos="";
 
 			// SQL
-			String sql = "select * From avisos";
-
+			
+			
 			
 			try {
+				String sql = "SELECT * FROM avisos"; 
+				
+				
 				Statement stmt = conexao.createStatement();
 
 				ResultSet rs = stmt.executeQuery(sql);
-
+	
+				
 				while (rs.next()) {
-
-					
-					
+			
+					listarAvisos +=  rs.getString("avisos");
 				}
+				
 
 			} catch (Exception e) {
-
+				System.out.println("Falha ao listar avisos: "+e);
 			}
 
-			return sql;
+			return listarAvisos();
 			
 		}
 

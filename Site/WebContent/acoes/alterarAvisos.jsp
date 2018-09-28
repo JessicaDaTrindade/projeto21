@@ -1,4 +1,4 @@
-<%@page import="br.com.site.bean.*, br.com.site.dao.*" %>
+<%@page import="br.com.site.bean.*, br.com.site.dao.*"%>
 
 <%
 	//Obter os dados do aluno

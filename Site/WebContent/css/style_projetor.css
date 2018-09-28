@@ -1,93 +1,99 @@
-
-@font-face{
-    font-family: "minhaFonte";
-    src: url("../fonts/BebasNeue-Regular.otf");
-}
-*{
-    text-decoration: none;
-    list-style: none;
-}
-html{
-    /* background-color: #2B3C51; */
-
-}
-body{
-    padding: 0px;
-    margin: 0px;
-    background-color: #2B3C51;
+@font-face {
+	font-family: "minhaFonte";
+	src: url("../fonts/BebasNeue-Regular.otf");
 }
 
-main{
-    /* border: 1px dotted black; */
-    overflow: auto;
-    background-color: #2B3C51;
+* {
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	/* background-color: #2B3C51; */
+	
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #2B3C51;
+}
+
+main {
+	/* border: 1px dotted black; */
+	overflow: auto;
+	background-color: #2B3C51;
 }
 
 /* SECTION MENU */
-#menu{
-    /* border: 1px dotted black; */
-    /* float: left; */
-    font-family: minhaFonte;
-    padding: 20px;
+#menu {
+	/* border: 1px dotted black; */
+	/* float: left; */
+	font-family: minhaFonte;
+	padding: 20px;
+}
 
+#menu ul {
+	overflow: auto;
+	text-align: center;
+	margin: auto;
+	width: 60%;
 }
-#menu ul{
-    overflow: auto;
-    text-align: center;
-    margin: auto;
-    width: 60%;
-}
-#menu ul li{
-    /* position: relative; */
 
-    
+#menu ul li {
+	/* position: relative; */
+	
 }
-#menu ul li a{
-    display: inline-block;
-    /* padding: 30px 10px; */
-    /* width: 120px; */
-    text-align: center;
-    padding: 5px 15px;
-    margin: auto;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    float: left;
+
+#menu ul li a {
+	display: inline-block;
+	/* padding: 30px 10px; */
+	/* width: 120px; */
+	text-align: center;
+	padding: 5px 15px;
+	margin: auto;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	float: left;
 }
-#menu ul li a:hover{
-    background-color: dimgray;
+
+#menu ul li a:hover {
+	background-color: dimgray;
 }
-#menu ul li a:link{
-    text-decoration: none;
+
+#menu ul li a:link {
+	text-decoration: none;
 }
-#menu ul hr{
-    width: 150px;
+
+#menu ul hr {
+	width: 150px;
 }
 /* SECTION CONTEÚDO */
-#conteudo{
-    /* border: 1px dotted black; */    
-    margin: auto;
-    width: 100%;
-    background-color: #EFEFEF;
+#conteudo {
+	/* border: 1px dotted black; */
+	margin: auto;
+	width: 100%;
+	background-color: #EFEFEF;
 }
 
-#painel{
-    margin: auto;
-    margin-bottom: 70px;
-    text-align: center;
-    padding: 5px;
-    background-color: #EFEFEF;
-
+#painel {
+	margin: auto;
+	margin-bottom: 70px;
+	text-align: center;
+	padding: 5px;
+	background-color: #EFEFEF;
 }
 /* RODAPÉ */
-footer{
-    text-align: center;
-    font-family: minhaFonte;
-    color:#EFEFEF;
-    padding: auto 15px;
-    background-color:#2B3C51 ;
+footer {
+	text-align: center;
+	font-family: minhaFonte;
+	color: #EFEFEF;
+	padding: auto 15px;
+	background-color: #2B3C51;
 }
-.fieldObrigatorio{
+
+.fieldObrigatorio {
 	font-size: 10px;
 	text-color: red;
 	color: red;
@@ -95,31 +101,31 @@ footer{
 }
 
 /*CSS quadro de avisos*/
-#avisos{
+#avisos {
 	width: 1000px;
-    margin-right: 15px;
-    margin-left: 30px;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left ;
-    outline: none;	
+	margin-right: 15px;
+	margin-left: 30px;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: left;
+	outline: none;
 }
-#btnEnviar{
-    background: #333333;
-    width: 150px;
-    margin: 10px;
-    margin-bottom: 3px;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 26px;
-    border-radius: 10px;
-    border-style: none;
-    font-family: minhaFonte;
-    outline: none;
-   
+
+#btnEnviar {
+	background: #333333;
+	width: 150px;
+	margin: 10px;
+	margin-bottom: 3px;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 10px;
+	border-style: none;
+	font-family: minhaFonte;
+	outline: none;
 }
-#btnEnviar:hover{
-    background-color: dimgray;
+
+#btnEnviar:hover {
+	background-color: dimgray;
 }
-	

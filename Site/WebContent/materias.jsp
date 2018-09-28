@@ -4,7 +4,7 @@
 
 <head>
 <!-- verificar sessão -->
-<%@include file = "include/incSessao.jsp"%>
+<%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,17 +61,15 @@
 </head>
 
 <body>
-	
+
 	<!-- PRINCIPAL -->
-	<main>
-	
-	<!-- MENU -->
+	<main> <!-- MENU -->
 	<section id="menu">
 
 		<!-- LISTA -->
 		<ul>
 
-<%
+			<%
 	
 
 	if (user.getCargo() == 1) {

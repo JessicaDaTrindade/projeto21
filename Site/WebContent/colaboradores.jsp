@@ -4,7 +4,7 @@
 <html>
 <head>
 <!-- verificar sessão -->
-<%@include file = "include/incSessao.jsp"%>
+<%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -12,14 +12,23 @@
 <title>COLABORADORES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/style_projetor.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
-    
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="css/colaboradores.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (max-width: 1199px)" href="css/colaboradores_projetor.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/colaboradores_smartphone.css" />
-    
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/style.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/style_projetor.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (max-width: 480px)" href="css/style_smartphone.css" />
+
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/colaboradores.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/colaboradores_projetor.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (max-width: 480px)"
+	href="css/colaboradores_smartphone.css" />
+
 <script src="main.js"></script>
 
 <!-- JQuery -->
@@ -52,7 +61,7 @@
 	<section id="menu">
 
 		<ul>
-<%
+			<%
 	
 
 	if (user.getCargo() == 1) {

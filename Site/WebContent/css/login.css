@@ -1,14 +1,13 @@
-@font-face{
-    font-family: "minhaFonte";
-    src: url("../fonts/BebasNeue-Regular.otf");
+@font-face {
+	font-family: "minhaFonte";
+	src: url("../fonts/BebasNeue-Regular.otf");
 }
 /* SIMPLIFICADO */
-#teste{
-
-    background-image: url(../img/login.jpg), none;
-    background-repeat: no-repeat;
-    background-size:100%;
-    padding: 9em;
+#teste {
+	background-image: url(../img/login.jpg), none;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 9em;
 }
 
 /* ORIGINAL */
@@ -46,17 +45,17 @@
     padding: 40px 0;
 }  */
 
-
 /* DIV LOGIN */
-.login{
-    width: 350px;
-    height: 350px;
-    border-radius: 10px;
-    margin: 80px auto;
-    padding: 30px;
-    background-color: rgba(43, 60, 81, 0.774) ;
+.login {
+	width: 350px;
+	height: 350px;
+	border-radius: 10px;
+	margin: 80px auto;
+	padding: 30px;
+	background-color: rgba(43, 60, 81, 0.774);
 }
-#frmLogin{
-    margin: 50px auto;
-    width: 300px;
+
+#frmLogin {
+	margin: 50px auto;
+	width: 300px;
 }
