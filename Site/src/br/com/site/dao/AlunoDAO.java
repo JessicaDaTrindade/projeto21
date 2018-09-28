@@ -419,7 +419,7 @@ public class AlunoDAO {
 		estrutura += "<tr>";
 		estrutura += "<th class='codAlunoNota'>Matrícula</th>"; 
 		estrutura += "<th class='nomeAlunoNota'>Nome</th>";
-		estrutura += "<th class='lancaNota'>Lançar</th>";
+		estrutura += "<th class='lancaNota'>Ação</th>";
 		estrutura += "</tr>";
 		estrutura += "</thead>";
 		estrutura += "<tbody>";
@@ -445,8 +445,9 @@ public class AlunoDAO {
 				estrutura += "<td class='codAlunoNota'>"+rs.getString(1)+"</td>";
 				estrutura += "<td class='nomeAlunoNota'>"+rs.getString(2)+"</a></td>";
 				estrutura += "<td class='lancaNota'>";
-				estrutura += "<a href='#'><span class='glyphicon glyphicon-plus' alt='Lançar nota'></a>";
-				estrutura += "<a href='#'><span class='glyphicon glyphicon-pencil' alt='Lançar nota'></a>";
+				estrutura += "<a href='#'><span class='glyphicon glyphicon-plus' alt='Lançar nota'></a>	";
+				estrutura += "<a href='#'><span class='glyphicon glyphicon-pencil' alt='Alterar'></a>	";
+				estrutura += "<a href='#'><span class='glyphicon glyphicon-trash' alt='Excluir'></a>	";
 				estrutura += "</td>";
 				
 				estrutura += "</tr>";  

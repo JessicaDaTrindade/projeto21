@@ -117,3 +117,30 @@
 #btnInferior:hover{
     background-color: dimgray;
 }
+#legenda{
+	width: 600px;
+	text-align: left;
+	
+}
+#filtTurma{
+	overflow:auto;
+}
+.lancaNota{
+
+	text-align:center !important;
+}
+.codAlunoNota{
+
+		text-align:center !important;
+}
+.nomeAlunoNota{
+		text-align:center !important;
+
+ } 
+.tblAlunoNota{
+width: 50% !important;
+margin: auto !important;
+}
+.liNotas{
+	display: inline-block;
+}
