@@ -2,8 +2,9 @@
 <html>
 
 <head>
-<!-- verificar sess„o -->
+<!-- verificar sess√£o -->
 <%@include file="include/incSessao.jsp"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +53,7 @@
 		response.sendRedirect("index.jsp");
 	}else if (user.getCargo() == 2) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 
@@ -61,7 +62,7 @@
 	</section>
 
 
-	<!-- CONTE⁄DO -->
+	<!-- CONTE√öDO -->
 	<section id="conteudo">
 
 		<div id="chamada">
@@ -79,9 +80,9 @@
 
 					<thead>
 						<tr>
-							<th class="coluna1 ">N˙mero MatrÌcula</th>
+							<th class="coluna1 ">N√∫mero Matr√≠cula</th>
 							<th class="coluna2 ">Nome</th>
-							<th class="coluna3 colunaPresenca">PresenÁa</th>
+							<th class="coluna3 colunaPresenca">Presen√ßa</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -283,7 +284,7 @@
 
 		</div>
 
-		<!-- BOT√O CONFIRMAR -->
+		<!-- BOT√ÉO CONFIRMAR -->
 		<input type="button" id="btnInferior" value="CONFIRMAR">
 
 

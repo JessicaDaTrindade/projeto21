@@ -4,12 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.swing.JOptionPane;
+
 import br.com.site.bean.UserLoginBEAN;
 import br.com.site.connection.Conexao;
 
 public class UserLoginDAO {
 	
-	//Atributo contendo coexão com BD
+	//Atributo contendo coexï¿½o com BD
 	Connection conexao;
 	
 	//Contrutor
@@ -17,7 +19,7 @@ public class UserLoginDAO {
 		this.conexao = new Conexao().obterConexao();
 	}
 	
-	//Método Login
+	//Mï¿½todo Login
 	public UserLoginBEAN login(String cpf, String senhaFuncionario) {
 		
 		//Objeto UserLoginBEAN
@@ -29,17 +31,17 @@ public class UserLoginDAO {
 			//SQL
 			String sql = "SELECT idCargo, cpf, senhaFuncionario, idCadastro FROM cadastroFuncionarios WHERE cpf = ? AND senhaFuncionario = ?";
 			
-			//Preparar conexão
+			//Preparar conexï¿½o
 			PreparedStatement pstmt = this.conexao.prepareStatement(sql);
 			
-			//Parâmetros do SQL
+			//Parï¿½metros do SQL
 			pstmt.setString(1, cpf);
 			pstmt.setString(2, senhaFuncionario);
 			
 			//Armazenar os resultados do comando SQL
 			ResultSet rs = pstmt.executeQuery();
 			
-			//Obter a última linha
+			//Obter a ï¿½ltima linha
 			rs.last();
 			
 			//Atributos do objeto UserLoginBEAN
@@ -51,6 +53,7 @@ public class UserLoginDAO {
 			
 		}catch(Exception e) {
 			System.out.println("Falha ao obter os dados.");
+
 		}
 		
 		//Retorno

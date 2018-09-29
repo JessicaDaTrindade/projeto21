@@ -1,10 +1,11 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.AlunoDAO"%>
 <%@page import="br.com.site.dao.TurmaDAO"%>
 <html>
 
 <head>
-<!-- verificar sess„o -->
+<!-- verificar sess√£o -->
 <%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
@@ -72,7 +73,7 @@
 		response.sendRedirect("index.jsp");
 	}else if (user.getCargo() == 2) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 
@@ -81,7 +82,7 @@
 	</section>
 
 
-	<!-- CONTE⁄DO -->
+	<!-- CONTE√öDO -->
 	<section id="conteudo">
 
 		<div id="nota">
@@ -97,16 +98,16 @@
 
 					<div id="legenda">
 						<p>
-							<span class='glyphicon glyphicon-plus' alt='LanÁar nota'>
-								Clique neste icone para lanÁar as notas no sistema.
+							<span class='glyphicon glyphicon-plus' alt='Lan√ßar nota'>
+								Clique neste icone para lan√ßar as notas no sistema.
 						</p>
 						<p>
 							<sapn class="glyphicon glyphicon-pencil"> Clique neste
-							icone para alterar as notas que est„o registradas no sistema.
+							icone para alterar as notas que est√£o registradas no sistema.
 						</p>
 						<p>
 							<span class='glyphicon glyphicon-trash' alt='Excluir'>
-								Clique neste icone para Excluir as notas que est„o regostradas
+								Clique neste icone para Excluir as notas que est√£o regostradas
 								no sistema.
 						</p>
 					</div>

@@ -1,9 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.ColaboradorDAO"%>
 <%@page import="br.com.site.bean.ColaboradorBEAN"%>
 <html>
 <head>
-<!-- verificar sess�o -->
+<!-- verificar sessão -->
 <%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
@@ -66,10 +67,10 @@
 
 	if (user.getCargo() == 1) {
 		out.print(
-				"<li><a href='index.jsp'>IN�CIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT�RIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
 		out.print(
-				"<li><a href='index.jsp'>IN�CIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT�RIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 
@@ -77,7 +78,7 @@
 
 	</section>
 
-	<!-- CONTEÃDO -->
+	<!-- CONTEÃÂDO -->
 	<section id="conteudoColaboradores">
 
 		<div id="painel">
@@ -86,10 +87,10 @@
 
 			<hr class="linha">
 
-			<!-- DIV CONTEÃšDO -->
+			<!-- DIV CONTEÃÅ¡DO -->
 			<div id="colaboradores">
 
-				<!-- BOTÃƒO CADASTRAR -->
+				<!-- BOTÃÆO CADASTRAR -->
 				<input type="button" value="CADASTRAR" id="btnCadastrar"
 					data-toggle="modal" data-target="#myModal">
 
@@ -163,19 +164,19 @@
 								type="radio" value="Casado(a)" name="estadoCivil">
 								Casado(a) <input type="radio" value="Divorciado(a)"
 								name="estadoCivil"> Divorciado(a) <input type="radio"
-								value="Viuvo(a)" name="estadoCivil">Viúvo(a)
+								value="Viuvo(a)" name="estadoCivil">ViÃºvo(a)
 							</label> <br>
 
 							<hr class="separador">
 
 							<!-- Cadastrar CEP -->
-							<h6 id="titulo2">Endere�o</h6>
+							<h6 id="titulo2">Endereço</h6>
 
 							<input type="text" name="cep" placeholder="CEP"> <input
 								type="text" name="logradouro" placeholder="LOGRADOURO">
-							<input type="text" name="numero" placeholder="Nº"> <br>
+							<input type="text" name="numero" placeholder="NÂº"> <br>
 							<br> <input type="text" name="bairro" placeholder="BAIRRO">
-							<input type="text" name="municipio" placeholder="MUNICÍPIO">
+							<input type="text" name="municipio" placeholder="MUNICÃPIO">
 							<input type="text" name="complemento" placeholder="COMPLEMENTO">
 							<hr class="separador">
 
@@ -197,10 +198,10 @@
 								name="Cargo">Diretor(a) <input type="radio"
 								value="Professor" name="Cargo" onclick="Mudarestado('minhaDiv')">Professor(a)
 								<input type="radio" value="Coordenador" name="Cargo">Coordenador(a)
-								<input type="radio" value="Secretário(a)" name="Cargo">Secretário(a)
-								<input type="radio" value="Serviços Gerais" name="Cargo">Serviços
+								<input type="radio" value="SecretÃ¡rio(a)" name="Cargo">SecretÃ¡rio(a)
+								<input type="radio" value="ServiÃ§os Gerais" name="Cargo">ServiÃ§os
 								Gerais <input type="radio" value="Cozinheiro" name="Cargo">Cozinheiro(a)
-								<input type="radio" value="Bibliotecário(a)" name="Cargo">Bibliotecário(a)
+								<input type="radio" value="BibliotecÃ¡rio(a)" name="Cargo">BibliotecÃ¡rio(a)
 							</label> <label>Salario <br> <input type="text"
 								name="Salario" placeholder="0.000,00">
 							</label>
@@ -218,20 +219,20 @@
 							<div id="minhaDiv">
 
 								<label> <br> <input type="checkbox"
-									value="História" name="Cargo">História <input
-									type="checkbox" value="Matemática" name="Cargo">Matemática
-									<input type="checkbox" value="Física" name="Cargo">Física
-									<input type="checkbox" value="Português" name="Cargo">Português
+									value="HistÃ³ria" name="Cargo">HistÃ³ria <input
+									type="checkbox" value="MatemÃ¡tica" name="Cargo">MatemÃ¡tica
+									<input type="checkbox" value="FÃ­sica" name="Cargo">FÃ­sica
+									<input type="checkbox" value="PortuguÃªs" name="Cargo">PortuguÃªs
 									<input type="checkbox" value="Artes" name="Cargo">Artes
-									<input type="checkbox" value="Educação Física" name="Cargo">Educação
-									Física <input type="checkbox" value="Ciências" name="Cargo">Ciências
+									<input type="checkbox" value="EducaÃ§Ã£o FÃ­sica" name="Cargo">EducaÃ§Ã£o
+									FÃ­sica <input type="checkbox" value="CiÃªncias" name="Cargo">CiÃªncias
 									<input type="checkbox" value="Biologia" name="Cargo">Biologia
-									<input type="checkbox" value="Inglês" name="Cargo">Inglês
+									<input type="checkbox" value="InglÃªs" name="Cargo">InglÃªs
 									<input type="checkbox" value="Espanhol" name="Cargo">Espanhol
 									<input type="checkbox" value="Geografia" name="Cargo">Geografia
-									<input type="checkbox" value="Química" name="Cargo">Química
+									<input type="checkbox" value="QuÃ­mica" name="Cargo">QuÃ­mica
 									<input type="checkbox" value="Sociologia" name="Cargo">Sociologia
-									<input type="checkbox" value="Informática" name="Cargo">Informática
+									<input type="checkbox" value="InformÃ¡tica" name="Cargo">InformÃ¡tica
 								</label>
 
 							</div>

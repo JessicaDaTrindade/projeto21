@@ -1,9 +1,12 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.AlunoDAO"%>
+
 <html>
 
 <head>
-<!-- verificar sess„o -->
+<!-- verificar sess√£o -->
 <%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
@@ -72,10 +75,10 @@
 
 	if (user.getCargo() == 1) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT…RIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT√âRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT…RIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT√âRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 		</ul>
@@ -86,7 +89,7 @@
 	</section>
 
 
-	<!-- CONTE⁄DO -->
+	<!-- CONTE√öDO -->
 	<section id="conteudo">
 
 		<div id="aluno">
@@ -175,7 +178,7 @@
 							<!-- cadastrar data de Nascimento -->
 							<label>Data de nascimento <br> <input type="date"
 								name="dataNascimento" required>
-							</label> <br> <label>Nome da M„e <br> <input
+							</label> <br> <label>Nome da M√£e <br> <input
 								type="text" name="nomeDaMae" required>
 							</label> <label>Nome do Pai <br> <input type="text"
 								name="nomeDoPai" required>
@@ -199,34 +202,34 @@
 								value="Solteiro(a)" name="estadoCivil" required>Solteiro(a)
 								<input type="radio" value="Casado(a)" name="estadoCivil">Casado(a)
 								<input type="radio" value="Divorciado(a)" name="estadoCivil">Divorciado(a)
-								<input type="radio" value="Viuvo(a)" name="estadoCivil">Vi˙vo(a)
+								<input type="radio" value="Viuvo(a)" name="estadoCivil">Vi√∫vo(a)
 							</label> <br>
 							<hr class="separador">
 
-							<!-- Cadastrar Telefones para contato e respons·vell  -->
-							<h5 id="titulo">Dados Respons·vel</h5>
+							<!-- Cadastrar Telefones para contato e respons√°vell  -->
+							<h5 id="titulo">Dados Respons√°vel</h5>
 
-							<label>Nome Respons·vel <br> <input type="text"
+							<label>Nome Respons√°vel <br> <input type="text"
 								name="responsavel" required>
-							</label> <br> <label>Telefone Respons·vel <br> <input
+							</label> <br> <label>Telefone Respons√°vel <br> <input
 								type="text" id="name" class="phone-ddd-mask"
 								name="telResponsavel" placeholder="Ex.: (00) 0000-0000" required>
-							</label> <label>Celular Respons·vel <br> <input type="text"
+							</label> <label>Celular Respons√°vel <br> <input type="text"
 								class="phone-ddd-mask" name="celResponsavel"
 								placeholder="Ex.: (00) 0000-0000" required>
 							</label>
 
 							<hr class="separador">
 
-							<!-- Cadastrar dados do endereÁo -->
-							<h6 id="titulo">EndereÁo</h6>
+							<!-- Cadastrar dados do endere√ßo -->
+							<h6 id="titulo">Endere√ßo</h6>
 
 							<input type="text" name="cep" placeholder="CEP" required>
 							<input type="text" name="logradouro" placeholder="LOGRADOURO"
 								required> <input type="text" name="numero"
-								placeholder="N∫" required> <br> <br> <input
+								placeholder="N¬∫" required> <br> <br> <input
 								type="text" name="bairro" placeholder="BAIRRO" required>
-							<input type="text" name="municipio" placeholder="MUNICÕPIO"
+							<input type="text" name="municipio" placeholder="MUNIC√çPIO"
 								required> <input type="text" name="complemento"
 								placeholder="COMPLEMENTO" required> <br> <br>
 

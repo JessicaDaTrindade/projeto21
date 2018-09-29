@@ -1,8 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.TurmaDAO"%>
 <html>
 <head>
-<!-- verificar sess„o -->
+<!-- verificar sess√£o -->
 <%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
@@ -65,10 +67,10 @@
 
 	if (user.getCargo() == 1) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT…RIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT√âRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
 		out.print(
-				"<li><a href='index.jsp'>INÕCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT…RIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>IN√çCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT√âRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 
@@ -76,7 +78,7 @@
 
 	</section>
 
-	<!-- CONTE⁄DO -->
+	<!-- CONTE√öDO -->
 	<section id="conteudoTurmas">
 
 		<div id="painelTurmas">
@@ -86,7 +88,7 @@
 			<hr class="linha">
 
 			<!-- Modelo Link -->
-			<!--<a href="https://comps.canstockphoto.com.br/selo-testado-aprovado-imagem_csp20208679.jpg" class="btn btn-green"><h4 id="subtitulo">1∫ano - a</h4></a>-->
+			<!--<a href="https://comps.canstockphoto.com.br/selo-testado-aprovado-imagem_csp20208679.jpg" class="btn btn-green"><h4 id="subtitulo">1¬∫ano - a</h4></a>-->
 
 			<% out.print(new TurmaDAO().listarTurma());%>
 

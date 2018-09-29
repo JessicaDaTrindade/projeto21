@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@page import="br.com.site.bean.UserLoginBEAN"%>
 <html>
@@ -38,7 +39,7 @@
 </head>
 <body>
 
-	<!-- DIV CONTEÚDO-->
+	<!-- DIV CONTEÃšDO-->
 	<div id="teste">
 
 		<!-- DIV LOGIN -->
@@ -53,6 +54,7 @@
 					class="form-control " id="senha" name="senha" placeholder="Senha">
 				<br> <br> <br>
 				<button type="submit" class="btn btn-default btn-lg btn-block">ENTRAR</button>
+	
 
 			</form>
 

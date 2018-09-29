@@ -1,14 +1,16 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.MateriaDao"%>
 <html>
 
 <head>
-<!-- verificar sess�o -->
+<!-- verificar sessão -->
 <%@include file="include/incSessao.jsp"%>
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>SGE | Mat�rias</title>
+<title>SGE | Matérias</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css"
@@ -74,38 +76,38 @@
 
 	if (user.getCargo() == 1) {
 		out.print(
-				"<li><a href='index.jsp'>IN�CIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT�RIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
 		out.print(
-				"<li><a href='index.jsp'>IN�CIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MAT�RIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
 		</ul>
 
 	</section>
 
-	<!-- CONTEښDO -->
+	<!-- CONTEÚDO -->
 	<section id="conteudo">
 
 		<!-- PAINEL -->
 		<div id="painel">
 
-			<!-- CONTEÚDO PAINEL -->
-			<h1 id="titulo">MAT�RIAS</h1>
+			<!-- CONTEÃDO PAINEL -->
+			<h1 id="titulo">MATÉRIAS</h1>
 
 			<hr class="linha">
 
-			<!-- DIV CONTEÚDO -->
+			<!-- DIV CONTEÃDO -->
 			<div id="materias">
 
-				<!-- BOTÃO CADASTRAR -->
+				<!-- BOTÃO CADASTRAR -->
 				<input type="button" value="CADASTRAR" id="btnCadastrar"
 					data-toggle="modal" data-target="#myModal">
 
-				<!-- DIV LISTA MAT�RIAS -->
+				<!-- DIV LISTA MATÉRIAS -->
 				<div id="divLista">
 
-					<!-- TABELA MAT�RIAS -->
+					<!-- TABELA MATÉRIAS -->
 
 					<% out.print(new MateriaDao().listarMateria()); %>
 					<%@ include file="script/checkbox.jsp"%>
@@ -124,7 +126,7 @@
 
 
 	</main>
-	<!-- RODAPÉ - ->
+	<!-- RODAPÃ - ->
 	<footer> E21 - 2018</footer>
 
 	<!-- Modal -->
@@ -137,7 +139,7 @@
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">CADASTRAR MAT�RIAS</h4>
+					<h4 class="modal-title" id="myModalLabel">CADASTRAR MATÉRIAS</h4>
 				</div>
 				<div class="modal-body">
 					<div>
@@ -145,14 +147,14 @@
 						<form action="acoes/materiaAcao.jsp" name="formMateria"
 							id="formMateria" onSubmit="return enviardados();">
 
-							<!-- CADASTRAR MAT�RIA -->
+							<!-- CADASTRAR MATÉRIA -->
 							<li><input type="text" name="nomeMateria"
-								id="txtNomeMateria" placeholder="Nome Mat�ria"> <!-- enviar para o banco de dados -->
+								id="txtNomeMateria" placeholder="Nome Matéria"> <!-- enviar para o banco de dados -->
 								<input type="submit" value="Cadastrar"
 								class="button button-primary"></li>
 
 							<li><label class="fieldObrigatorio" id="lblNomeMateria">Campo
-									obrigat�rio</label></li>
+									obrigatório</label></li>
 
 
 						</form>

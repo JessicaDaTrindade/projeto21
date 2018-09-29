@@ -9,9 +9,10 @@ import java.sql.Statement;
 import br.com.site.bean.AvisosBean;
 import br.com.site.connection.Conexao;
 
+
 public class AvisosDao {
 
-	// Atributo contendo a conexão com o bd
+	// Atributo contendo a conexï¿½o com o bd
 	Connection conexao;
 
  //Construtor
@@ -19,8 +20,9 @@ public class AvisosDao {
 		this.conexao = new Conexao().obterConexao();
 	}
 	
-	// Método de cadastro
+	// Mï¿½todo de cadastro
 		public void cadastrarAvisos(AvisosBean obj) {
+			
 			
 			
 
@@ -30,15 +32,15 @@ public class AvisosDao {
 				// SQL
 				String sql = "INSERT INTO avisos VALUES (null, ?)";
 
-				// Preparar a conexão
+				// Preparar a conexï¿½o
 				PreparedStatement pstmt = conexao.prepareStatement(sql);
 
-				// Parâmetros
+				// Parï¿½metros
 				pstmt.setString(1, obj.getAvisos());
 			
 				// Executar comando
 				pstmt.execute();
-
+			
 		} catch (Exception e) {
 			System.out.println("Falha ao listar avisos: "+e);
 		
@@ -65,8 +67,9 @@ public class AvisosDao {
 	
 				
 				while (rs.next()) {
-			
-					listarAvisos +=  rs.getString("avisos");
+					
+					listarAvisos += rs.getString("avisos")+System.getProperty("line.separator")+System.lineSeparator();
+					 
 				}
 				
 
