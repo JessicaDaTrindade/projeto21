@@ -52,15 +52,16 @@ function alterarAviso(){
 </script>
 </head>
 <body>
-    
-    <main>
+
+  <main>
     
     <%
 		Conexao c = new Conexao();
 		c.obterConexao();
 	%>
-        
-        <!-- MENU -->
+	
+	
+	        <!-- MENU -->
         <section id="menu">
 
             <ul>
@@ -70,7 +71,7 @@ function alterarAviso(){
 	
 
 	if (user.getCargo() == 1) {
-		out.print(
+		out.print("<img src=img/LECIONA.png class='logo' height='80px' width='100px' margin-top: 20px;>"+
 				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
 		out.print(
@@ -82,10 +83,12 @@ function alterarAviso(){
 %>
 				
             </ul>
-
-        </section>
-        
-        <!-- CONTEÚDO -->
+             </section>
+             
+             
+             
+             
+              <!-- CONTEÚDO -->
         <section id="conteudoInicio">
 
             <div id="painelInicio">
@@ -101,12 +104,13 @@ function alterarAviso(){
         			
 
          <MARQUEE class= "marqueAviso" direction="left" onmouseover='this.stop()' onmouseout='this.start()'>
-          	<%out.print(new AvisosDao().listarAvisos());%>
+          		<% out.print(new AvisosDao().listarAvisos()); %>
           	
           </marquee>
-
+						</h4> 
+						
         </div>
-                          </h4> 
+                          
                     </div>
                 </div>
 
@@ -139,14 +143,15 @@ function alterarAviso(){
 									
 						}
 					%>
-            </div>
+           
 
         </section>
-	
-
-    </main>
-
-    <footer> E21 - 2018</footer>
+             
+        
+        </main>
+        
+        <footer> E21 - 2018</footer>
+    
 
 </body>
 </html>

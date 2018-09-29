@@ -45,7 +45,8 @@ public class AvisosDao {
 			}
 		}
 		
-		// Metodo para selecionar avisos
+		
+		// Metodo para listar avisos
 		public String listarAvisos() {
 			
 			String listarAvisos="";
@@ -73,7 +74,7 @@ public class AvisosDao {
 				System.out.println("Falha ao listar avisos: "+e);
 			}
 
-			return listarAvisos();
+			return listarAvisos;
 			
 		}
 
