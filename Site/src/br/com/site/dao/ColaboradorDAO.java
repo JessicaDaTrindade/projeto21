@@ -11,7 +11,7 @@ import br.com.site.connection.Conexao;
 
 public class ColaboradorDAO {
 
-	// Atributos contendo a conexão com o Banco de Dados
+	// Atributos contendo a conexï¿½o com o Banco de Dados
 	Connection conexao;
 
 	// Contrutor
@@ -19,7 +19,7 @@ public class ColaboradorDAO {
 		this.conexao = new Conexao().obterConexao();
 	}
 
-	// Método de cadastro
+	// Mï¿½todo de cadastro
 	public void cadastrarColaborador(ColaboradorBEAN obj) {
 
 		// Tentar realizar o cadastro do aluno
@@ -29,10 +29,10 @@ public class ColaboradorDAO {
 			String sql = "INSERT INTO cadastrofuncionarios (nome, sobrenome, sexo, rg, cpf, dataNascimento, estadoCivil, cep, logradouro, numero, bairro, municipio, complemento, telefone, celular, email, idCargo, salario) VALUES "
 					+ "( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-			// Preparar a conexão
+			// Preparar a conexï¿½o
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 
-			// Parâmetros
+			// Parï¿½metros
 			pstmt.setString(1, obj.getNome());
 			pstmt.setString(2, obj.getSobrenome());
 			pstmt.setString(3, obj.getSexo());
@@ -61,7 +61,7 @@ public class ColaboradorDAO {
 
 	}
 
-	// Método para pegar as informações dos Colaboradores
+	// Mï¿½todo para pegar as informaï¿½ï¿½es dos Colaboradores
 	public String listarColaboradores() {
 
 		// Estrutura
@@ -76,7 +76,7 @@ public class ColaboradorDAO {
 		estrutura += "</thead>";
 		estrutura += "<tbody>";
 
-		// Obter os dados dos usuários
+		// Obter os dados dos usuï¿½rios
 		try {
 			
 			// SQL
@@ -89,7 +89,7 @@ public class ColaboradorDAO {
 			// Executar o comando e obter os dados
 			ResultSet rs = stmt.executeQuery(sql);
 
-			// Laço
+			// Laï¿½o
 			while (rs.next()) {
 				estrutura += "<tr>";
 				estrutura += "<td class='celulaCargo'>" + rs.getString(2) + "</td>";
@@ -145,34 +145,34 @@ public class ColaboradorDAO {
 
 	}
 
-	// Método para pegar os detalhes do professor
+	// Mï¿½todo para pegar os detalhes do professor
 	public String detalhesColaborador(String idColaborador) {
 
 		// Estrutura
 		String estruturaDetalhes = "<table class='table table-striped tabela'>";
 		estruturaDetalhes += "<thead>";
 		estruturaDetalhes += "<tr>";
-		estruturaDetalhes += "<th class='celulaCod'>Código</th>";
+		estruturaDetalhes += "<th class='celulaCod'>Cï¿½digo</th>";
 		estruturaDetalhes += "<th class='celulaNome'>Nome</th>";
 		estruturaDetalhes += "</tr>";
 		estruturaDetalhes += "</thead>";
 
-		// Obter os dados do funcionário
+		// Obter os dados do funcionï¿½rio
 		try {
 
 			// SQL
 			String sql = "SELECT cadastrofuncionarios.idCadastro, cadastrofuncionarios.nome";
 
-			// PREPARAR CONEXÃO
+			// PREPARAR CONEXï¿½O
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 
-			// PARÂMETROS
+			// PARï¿½METROS
 			pstmt.setString(1, idColaborador);
 
 			// EXECUTAR COMANDO
 			ResultSet rs = pstmt.executeQuery();
 
-			// Laço
+			// Laï¿½o
 			while (rs.next()) {
 
 				estruturaDetalhes += "<tr>";
@@ -193,22 +193,22 @@ public class ColaboradorDAO {
 
 	}
 	
-	//MÉTODO PARA EXCLUIR MATÉRIA
+	//Mï¿½TODO PARA EXCLUIR MATï¿½RIA
 	public void excluirColaborador(int idColaborador) {
 		
-		//Tenta realizar a exclusão
+		//Tenta realizar a exclusï¿½o
 		try {
 			
 			//SQL
 			String sql = "DELETE FROM cadastrofuncionarios WHERE idCadastro = ?";
 			
-			//Prepara a conexão
+			//Prepara a conexï¿½o
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
-			//Parâmetro
+			//Parï¿½metro
 			pstmt.setInt(1, idColaborador);
 			
-			//Executa a ação
+			//Executa a aï¿½ï¿½o
 			pstmt.execute();
 			
 		}catch(Exception e) {
@@ -216,24 +216,24 @@ public class ColaboradorDAO {
 		}
 	}
 	
-	//Método para Obter dados do Funcionário
+	//Mï¿½todo para Obter dados do Funcionï¿½rio
 		public ColaboradorBEAN dadosColaborador(String idCadastro){
 			
 			ColaboradorBEAN obj = new ColaboradorBEAN();
 			
-			//Tenta realizar a exclusão
+			//Tenta realizar a exclusï¿½o
 			try {
 				
 				//SQL
 				String sql = "SELECT * FROM cadastrofuncionarios WHERE idCadastro = ?";
 				
-				//Prepara a conexão
+				//Prepara a conexï¿½o
 				PreparedStatement pstmt = conexao.prepareStatement(sql);
 				
-				//Parâmetro
+				//Parï¿½metro
 				pstmt.setString(1, idCadastro);
 				
-				//Executa a ação
+				//Executa a aï¿½ï¿½o
 				ResultSet rs = pstmt.executeQuery();
 				
 				while(rs.next()) {
@@ -268,23 +268,31 @@ public class ColaboradorDAO {
 			
 		}
 		
-		//Método Modal
+		//Mï¿½todo Modal
 		public String modalAlterar(String idCadastro) {
 			
-			//Instanciar objeto usuário
+			//String estruturaAlterar = "<% if(request.getParameter('idUsuario') == null){ %>";
+			String estruturaAlterar = "<div class='modal fade' id='modalAlterar"+idCadastro+"' tabindex='-1' role='dialog'>";
+			estruturaAlterar+="<div class='modal-dialog' role='document'>";
+			estruturaAlterar+="<div class='modal-content'>";
+			
+			//INï¿½CIO FORMULARIO
+			estruturaAlterar+="<form action='acoes/alterarColaborador.jsp'>";
+			
+			estruturaAlterar+="<div class='modal-header'>";
+			estruturaAlterar+="<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+			estruturaAlterar+="<h4 class='modal-title'>Alterar Colaborador</h4>";
+			estruturaAlterar+="</div>";
+			estruturaAlterar+="<div class='modal-body'>";
+			estruturaAlterar+="<p>Dados do cadastro: </p>";
+			
+			//Instanciar objeto usuï¿½rio
 			ColaboradorBEAN colaborador = new ColaboradorBEAN();
 			colaborador = new ColaboradorDAO().dadosColaborador(idCadastro);
 			
-			String estruturaAlterar = "<div class='modal fade' id='modalAlterar"+idCadastro+"' tabindex='-1' role='dialog' >";
-			estruturaAlterar+="<div class='modal-dialog' role='document'>";
-			estruturaAlterar+="<div class='modal-content'>";
-			estruturaAlterar += "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-			estruturaAlterar+="<div class='modal-header'>";
-			estruturaAlterar += "<h4 class='modal-title titulo' id='myModalLabel'>Alterar Colaborador</h4>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "<div class='modal-body'>";
-			estruturaAlterar += "<div>";
-			estruturaAlterar += "<form action='acoes/colaboradorAcao.jsp'>";
+			
+			//CAMPOS FORMULï¿½RIO
+			estruturaAlterar+="<input type='hidden' name='idCadastro' id='idCadastro' value='"+colaborador.getIdCadastro()+"'><br>";
 			estruturaAlterar += "<label>Nome";
 			estruturaAlterar += "<br>";
 			estruturaAlterar += "<input type='text' name='nome' value='"+colaborador.getNome()+"'>";
@@ -337,67 +345,91 @@ public class ColaboradorDAO {
 				estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' checked>Solteiro(a)";
 				estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil'>Casado(a)";
 				estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil'>Divorciado(a)";
-				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viúvo(a)";
+				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viï¿½vo(a)";
 				
 			}else if(colaborador.getEstadoCivil().equals("Casado(a)")){
 				estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' >Solteiro(a)";
 				estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil' checked>Casado(a)";
 				estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil'>Divorciado(a)";
-				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viúvo(a)";
+				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viï¿½vo(a)";
 				
 			}else if(colaborador.getEstadoCivil().equals("Divorciado(a)")){
 				estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' >Solteiro(a)";
 				estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil' Casado(a)";
 				estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil'checked>Divorciado(a)";
-				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viúvo(a)";
+				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'>Viï¿½vo(a)";
 				
 			}else{
 				estruturaAlterar += "<input type='radio' value='Solteiro(a)' name='estadoCivil' >Solteiro(a)";
 				estruturaAlterar += "<input type='radio' value='Casado(a)' name='estadoCivil' Casado(a)";
 				estruturaAlterar += "<input type='radio' value='Divorciado(a)' name='estadoCivil' >Divorciado(a)";
-				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'checked>Viúvo(a)";
+				estruturaAlterar += "<input type='radio' value='Viuvo(a)' name='estadoCivil'checked>Viï¿½vo(a)";
 			}
-			estruturaAlterar += "<h6 id='titulo'>Endereço</h6>";
+			estruturaAlterar += "<h6 id='titulo'>Endereï¿½o</h6>";
 			estruturaAlterar += "<input type='text' name='cep' placeholder='CEP' value='"+colaborador.getCep()+"'>";
 			estruturaAlterar += "<input type='text' name='logradouro' placeholder='LOGRADOURO' value='"+colaborador.getLogradouro()+"'>";
-			estruturaAlterar += "<input type='text' name='numero' placeholder='Nº' value='"+colaborador.getNumero()+"'>";
+			estruturaAlterar += "<input type='text' name='numero' placeholder='Nï¿½' value='"+colaborador.getNumero()+"'>";
 			estruturaAlterar += "<br>";
 			estruturaAlterar += "<br>";
 			estruturaAlterar += "<input type='text' name='bairro' placeholder='BAIRRO' value='"+colaborador.getBairro()+"'>";
-			estruturaAlterar += "<input type='text' name='municipio' placeholder='MUNICÍPIO' value='"+colaborador.getMunicipio()+"'>";
+			estruturaAlterar += "<input type='text' name='municipio' placeholder='MUNICï¿½PIO' value='"+colaborador.getMunicipio()+"'>";
 			estruturaAlterar += "<input type='text' name='complemento' placeholder='COMPLEMENTO' value='"+colaborador.getComplemento()+"'>";
 			estruturaAlterar += "<br>";
 			estruturaAlterar += "<br>";
-			estruturaAlterar += "<div id='botao'>";
-			estruturaAlterar += "<input type='submit' class='btn btn-primary' value='Salvar'>";
-			estruturaAlterar += "<br>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "</form>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "<div class='modal-footer'>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "</div>";
-			estruturaAlterar += "</div>";
+			
+			estruturaAlterar+="</div>";
+			estruturaAlterar+="<div class='modal-footer'>";
+			
+			//BOTï¿½O SALVAR FORMULARIO
+			estruturaAlterar+="<input type='submit' class='btn btn-primary' value='Salvar'>";
+			
+			estruturaAlterar+="<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>";
+			estruturaAlterar+="</div>";
+			
+			//FIM FORMULï¿½RIO
+			estruturaAlterar+="</form>";
+			
+			estruturaAlterar+="</div><!-- /.modal-content -->";
+			estruturaAlterar+="</div><!-- /.modal-dialog -->";
+			estruturaAlterar+="</div><!-- /.modal -->";
 			
 			return estruturaAlterar;
 		}
 		
-		//Método para Alterar Colaborador
+		//Mï¿½todo para Alterar Colaborador
 		public void alterarDadosColaborador(ColaboradorBEAN obj) {
 			
 			//Tenta atualizar
 			try {
 				
 				//SQL - #### VOU TER QUE ADD TODOS OS CAMPOS DE CADASTRO ####
-				String sql = "UPDATE cadastrofuncionarios SET nomeMateria = ? WHERE idMateria = ?";
+				String sql = "UPDATE cadastrofuncionarios SET nome=? , sobrenome=? , sexo=? , rg=? , cpf=? , dataNascimento=? , estadoCivil=? , cep=? , logradouro=? , numero=? , bairro=? , municipio=? , complemento=? , telefone=? , celular=? , email=? , idCargo=? , salario= ? WHERE idCadastro =?";
 				
-				//Prepara a conexão
+				//Prepara a conexï¿½o
 				PreparedStatement pstmt = conexao.prepareStatement(sql);
 				
-				//Parâmetros
+				//Parï¿½metros
 				pstmt.setString(1, obj.getNome());
-				pstmt.setInt(2, obj.getIdCadastro());
+				pstmt.setString(2, obj.getSobrenome());
+				pstmt.setString(3, obj.getSexo());
+				pstmt.setString(4, obj.getRg());
+				pstmt.setString(5, obj.getCpf());
+				pstmt.setString(6, obj.getDataNascimento());
+				pstmt.setString(7, obj.getEstadoCivil());
+				pstmt.setString(8, obj.getCep());
+				pstmt.setString(9, obj.getLogradouro());
+				pstmt.setString(10, obj.getNumero());
+				pstmt.setString(11, obj.getBairro());
+				pstmt.setString(12, obj.getMunicipio());
+				pstmt.setString(13, obj.getComplemento());
+				pstmt.setString(14, obj.getTelefone());
+				pstmt.setString(15, obj.getCelular());
+				pstmt.setString(16, obj.getEmail());
+				pstmt.setString(17, obj.getIdCargo());
+				pstmt.setString(18, obj.getSalario());
+				pstmt.setInt(19, obj.getIdCadastro());
+				
+				
 				
 				//Executar
 				pstmt.execute();
@@ -408,7 +440,7 @@ public class ColaboradorDAO {
 			
 		}
 		
-		//MÉTODO MODAL EXCLUIR MATÉRIA
+		//Mï¿½TODO MODAL EXCLUIR MATï¿½RIA
 		public String modalExcluir(String idColaborador){
 			//String estruturaAlterar = "<% if(request.getParameter('idUsuario') == null){ %>";
 			String estruturaExcluir = "<div class='modal fade' id='modalExcluir"+idColaborador+"' tabindex='-1' role='dialog'>";	
