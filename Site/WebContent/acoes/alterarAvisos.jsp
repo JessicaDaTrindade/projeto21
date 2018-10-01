@@ -13,8 +13,8 @@
 	
 	
 	//Executar o comando DAO
-	new AvisosDao().cadastrarAvisos(obj);
-	
+	new AvisosDao().alterarAvisos(obj);
+
 	//Redirecionamento
 	//response.sendRedirect("../index.jsp");
 	

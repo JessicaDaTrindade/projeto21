@@ -15,6 +15,7 @@
 	padding-top: 25px;
 	color: rgb(63, 63, 63);
 	font-size: 25px;
+	margin-left: 50px;
 }
 
 #conteudoInicio {
@@ -65,4 +66,5 @@
 	border-radius: 5px;
 	width: 95%;
 	height: 650px;
+	margin-left: 50px;
 }

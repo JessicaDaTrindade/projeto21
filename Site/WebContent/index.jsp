@@ -79,12 +79,12 @@ function alterarAviso(){
 
 	if (user.getCargo() == 1) {
 		out.print("<img src=img/LECIONA.png class='logo' height='80px' width='100px' margin-top: 20px;>"+
-				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.html'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
+				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='colaboradores.jsp'>COLABORADORES</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	} else if (user.getCargo() == 3) {
-		out.print(
+		out.print("<img src=img/LECIONA.png class='logo' height='80px' width='100px' margin-top: 20px;>"+
 				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='alunos.jsp'>ALUNOS</a></li><li><a href='materias.jsp'>MATÉRIAS</a></li><li><a href='turmas.jsp'>TURMAS</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}else if (user.getCargo() == 2) {
-		out.print(
+		out.print("<img src=img/LECIONA.png class='logo' height='80px' width='100px' margin-top: 20px;>"+
 				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>
@@ -134,21 +134,19 @@ function alterarAviso(){
 								
 								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'> ");  
 								out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
-								out.print("<li><a href='#' onclick='javascript:enviarAviso();'><span class='Enviar glyphicon glyphicon-ok'> Enviar</a></li>");
+								out.print("<a href='#' onclick='javascript:enviarAviso();'><span class='Enviar glyphicon glyphicon-ok'></a>");
 								out.print("</form>");
-								out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/alterarAvisos.jsp'>");
-								out.print("<li><a href='#' onclick='javascript:alterarAviso();'><span class='Alterar glyphicon glyphicon-list-alt'> Alterar/Excluir</a></li>");
-								out.print("</form>");
+								
 							
 						} else if (user.getCargo() == 3) {
 							
-							out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'>");  
+							out.print("<form name='frmAvisos' id='frmAvisos' action='acoes/avisosAcao.jsp'> ");  
 							out.print("<input type='text' name='txtAvisos' id='txtAvisos' placeholder='Cadastrar avisos'>");
 							out.print("<li><a href='#' onclick='javascript:enviarAviso();'><span class='Enviar glyphicon glyphicon-ok'> Enviar</a></li>");
-							out.print("<li><a href='#' onclick='javascript:alterarAviso();'><span class='Alterar glyphicon glyphicon-list-alt'> Alterar/Excluir</a></li>");
 							out.print("</form>");						
 									
 						}
+					out.print(new AvisosDao().tabelaAvisos());
 					%>
            
 

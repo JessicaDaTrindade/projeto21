@@ -72,7 +72,7 @@
 	} else if (user.getCargo() == 3) {
 		response.sendRedirect("index.jsp");
 	}else if (user.getCargo() == 2) {
-		out.print(
+		out.print("<img src=img/LECIONA.png class='logo' height='80px' width='100px' margin-top: 20px;>"+
 				"<li><a href='index.jsp'>INÍCIO</a></li><li><a href='notas.jsp'>NOTAS</a></li><li><a href='chamada.jsp'>CHAMADA</a></li><li><a href='acoes/logout.jsp'>SAIR</a></li>");
 	}
 %>

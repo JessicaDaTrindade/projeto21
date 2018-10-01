@@ -58,7 +58,7 @@ public class AlunoDAO {
 
 			// Executar comando
 			pstmt.execute();
-			System.out.println("ok");
+			
 		} catch (Exception e) {
 			System.out.println("Falha ao cadastrar " + e.getMessage());
 		}
