@@ -7,7 +7,7 @@ ColaboradorBEAN obj = new ColaboradorBEAN();
 
 
 	//Obter dados
-	String idCadastro = request.getParameter("idCadastro");
+	int idCadastro = Integer.parseInt(request.getParameter("idCadastro"));
 	String nome = request.getParameter("nome");
 	String sobrenome = request.getParameter("sobrenome");
 	String sexo = request.getParameter("sexo");
@@ -24,10 +24,10 @@ ColaboradorBEAN obj = new ColaboradorBEAN();
 	String telefone = request.getParameter("telefone");
 	String celular = request.getParameter("celular");
 	String email = request.getParameter("email");
-	String cargo = request.getParameter("cargo");
+	//String cargo = request.getParameter("cargo");
 	String salario = request.getParameter("salario");
 	
-	obj.setIdCadastro(Integer.parseInt(idCadastro));
+	obj.setIdCadastro(idCadastro);
 	obj.setNome(nome);
 	obj.setSobrenome(sobrenome);
 	obj.setSexo(sexo);
@@ -44,7 +44,7 @@ ColaboradorBEAN obj = new ColaboradorBEAN();
 	obj.setTelefone(telefone);
 	obj.setCelular(celular);
 	obj.setEmail(email);
-	obj.setIdCargo(cargo);
+	//obj.setIdCargo(cargo);
 	obj.setSalario(salario);
 
 

@@ -13,7 +13,7 @@ user = new UserLoginDAO().login(usuario, senha);
 
 //Redirecionamento
 if(user.getCargo() == 0){
-	response.sendRedirect("../index.jsp?login=falha");
+	response.sendRedirect("../login.jsp?msg=falha");
 }else{
 	session.setAttribute("user", user);
 	response.sendRedirect("../index.jsp");
