@@ -9,7 +9,7 @@
  				new AvisosDao().excluirAvisos(idAvisos);
  				
  				//Redirecionamento
- 			//	response.sendRedirect("../index.jsp");
+ 				response.sendRedirect("../index.jsp");
           	
           	
   %>

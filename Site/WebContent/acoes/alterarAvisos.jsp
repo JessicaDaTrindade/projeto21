@@ -2,7 +2,7 @@
 
 <%
 	//Obter os dados do aluno
-	String avisos = request.getParameter("txtAvisos");
+	String avisos = request.getParameter("avisos");
 	int idAvisos = Integer.parseInt(request.getParameter("idAvisos")); 
 
 	
@@ -16,7 +16,7 @@
 	new AvisosDao().alterarAvisos(obj);
 
 	//Redirecionamento
-	//response.sendRedirect("../index.jsp");
+	response.sendRedirect("../index.jsp");
 	
 	
 %>

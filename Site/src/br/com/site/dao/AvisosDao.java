@@ -198,6 +198,7 @@ public class AvisosDao {
 
 						while (rs.next()) {
 							obj.setIdAvisos(rs.getInt(1));
+							obj.setAvisos(rs.getString(2));
 							
 
 						}
@@ -276,6 +277,7 @@ public class AvisosDao {
 						//Executar
 						pstmt.execute();
 						System.out.println(obj.getIdAvisos());
+						System.out.println(obj.getAvisos());
 						
 					}catch(Exception e) {
 						System.out.println("Falha ao alterar");
