@@ -95,22 +95,6 @@
 			<div id="conteudo">
 
 				<div id="areaNotas">
-
-					<div id="legenda">
-						<p>
-							<span class='glyphicon glyphicon-plus' alt='Lançar nota'>
-								Clique neste icone para lançar as notas no sistema.
-						</p>
-						<p>
-							<sapn class="glyphicon glyphicon-pencil"> Clique neste
-							icone para alterar as notas que estão registradas no sistema.
-						</p>
-						<p>
-							<span class='glyphicon glyphicon-trash' alt='Excluir'>
-								Clique neste icone para Excluir as notas que estão regostradas
-								no sistema.
-						</p>
-					</div>
 					<br>
 					<br>
 					<form id="frmNotas">
@@ -138,11 +122,9 @@
 
 
 		</div>
-
 	</section>
-
 	</main>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<footer> E21 - 2018</footer>
 
 </body>

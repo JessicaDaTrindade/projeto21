@@ -10,11 +10,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Chamadas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/style.css" />
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/chamada.css" />
-<script src="main.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/style.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/style_projetor.css" />
+
+
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1200px)" href="css/chamada.css" />
+<link rel="stylesheet" type="text/css"
+	media="screen and (min-width: 1000px) and (max-width: 1199px)"
+	href="css/chamada_projetor.css" />
 
 
 

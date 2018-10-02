@@ -58,8 +58,7 @@
 
 /* DIV MATÉRIAS */
 #materias {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 20px 5px;
 	border-radius: 10px;
 	text-align: center;
 	margin: auto;
@@ -120,4 +119,5 @@
 
 #notas {
 	padding: 40px;
+	margin: auto;
 }
