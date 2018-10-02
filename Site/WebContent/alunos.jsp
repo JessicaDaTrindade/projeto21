@@ -73,7 +73,7 @@
 
 
 
-
+<link rel="stylesheet" media="screen" type="text/css" href="css/sobrepoe.css">
 </head>
 
 <body>
@@ -112,7 +112,6 @@
 
 			<hr class="linha">
 
-			<li class="separador"></li>
 
 			<!-- cadastrar alunos -->
 			<input type="button" value="CADASTRAR" id="btnCadastrar"
