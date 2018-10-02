@@ -33,6 +33,9 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"/></script>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -55,8 +58,8 @@
 <script language="JavaScript" src="script/validarNomeAluno.js"></script>
 
 
-
 <script src="js/script.js"></script>
+
 
 
 
@@ -171,9 +174,11 @@
 							<!-- Cadastrar RG e CPF  -->
 							<label>RG <br> <input type="text" name="rg" required>
 							</label> <label>CPF <br> <input type="text"
-								class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00"
+								 name="cpf"  class="cpf" placeholder="Ex.: 000.000.000-00"
 								required>
+			 
 							</label>
+							
 
 							<!-- cadastrar data de Nascimento -->
 							<label>Data de nascimento <br> <input type="date"
