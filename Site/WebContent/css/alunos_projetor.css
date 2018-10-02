@@ -4,22 +4,26 @@
 }
 
 #aluno {
-	margin-bottom: 70px;
-	text-align: justify;
-	padding: 40px;
-	background-color: #EFEFEF;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	text-align: center;
+	margin: auto;
 }
 
 .linha {
 	border-color: rgb(63, 63, 63);
 	width: 800px;
+	margin-bottom: 20px;
 }
 
 #aluno h1 {
-	text-align: center;
 	font-family: minhaFonte;
 	color: rgb(63, 63, 63);
-	font-size: 70px;
+	font-size: 50px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
 }
 
 #aluno li.separador {

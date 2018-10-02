@@ -93,7 +93,7 @@ public class ColaboradorDAO {
 			while (rs.next()) {
 				estrutura += "<tr>";
 				estrutura += "<td class='celulaCargo'>" + rs.getString(2) + "</td>";
-				estrutura += "<td class='celulaMateria'><a href='#' data-toggle='modal' data-target='#modalDetalhes"
+				estrutura += "<td class='celulaColaborador'><a href='#' data-toggle='modal' data-target='#modalDetalhes"
 						+ rs.getString(1) + "' title='Detalhes'>" + rs.getString(3) + " " + rs.getString(4)
 						+ "</a></td>";
 				estrutura += "<td class='celulaAlterar'><a href='#' data-toggle='modal' data-target='#modalAlterar"
