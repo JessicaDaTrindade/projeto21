@@ -33,6 +33,17 @@
 	href="css/style.css" />
 <link rel="stylesheet" type="text/css" media="screen"
 	href="css/login.css" />
+	
+		<!-- MÁSCARA CPF -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script>
+    $(document).ready(function () { 
+        var $seuCampoCpf = $("#CPF");
+        $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+    });
+</script>
 
 
 
@@ -49,8 +60,8 @@
 			<form method="post" action="acoes/logar.jsp" id="frmLogin">
 
 
-				<input type="text" class="form-control " id="usuario" name="usuario"
-					placeholder="CPF"> <br> <input type="password"
+				<input type="text" class="form-control " name="usuario"
+				id="CPF" maxlength="14" placeholder="Cpf: 000.000.000-00"> <br> <input type="password"
 					class="form-control " id="senha" name="senha" placeholder="Senha">
 				<br> <br> <br>
 				<button type="submit" class="btn btn-default btn-lg btn-block">ENTRAR</button>

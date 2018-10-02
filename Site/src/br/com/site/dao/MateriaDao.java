@@ -12,7 +12,7 @@ import br.com.site.connection.Conexao;
 
 public class MateriaDao {
 	
-	//Atributo contendo coexão com BD
+	//Atributo contendo coexï¿½o com BD
 	Connection conexao;
 	
 	//Contrutor
@@ -20,7 +20,7 @@ public class MateriaDao {
 		this.conexao = new Conexao().obterConexao();
 	}
 	
-	//MÉTODO CADASTRO #####################################################
+	//Mï¿½TODO CADASTRO #####################################################
 	public void cadastrarMateria(MateriaBean obj) {
 		
 		//Tentar realizar cadastro do aluno
@@ -29,10 +29,10 @@ public class MateriaDao {
 			//SQL
 			String sql = "INSERT INTO materias (nomeMateria) VALUES (?)";
 			
-			//PREPARAR CONEXÃO
+			//PREPARAR CONEXï¿½O
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
-			//PARÂMETROS
+			//PARï¿½METROS
 			pstmt.setString(1, obj.getNomeMateria());
 			
 			//EXECUTAR COMANDO
@@ -45,14 +45,14 @@ public class MateriaDao {
 		
 	}
 	
-	//MÉTODO LISTAGEM DAS MATÉRIAS ########################################
+	//Mï¿½TODO LISTAGEM DAS MATï¿½RIAS ########################################
 	public String listarMateria() {
 		
 		//Estrutura
 		String estrutura = "<table class='table table-striped'>";
 		estrutura += "<thead>";
 		estrutura += "<tr>";
-		estrutura += "<th class='celulaCod'>Código</th>"; 
+		estrutura += "<th class='celulaCod'>CÃ³digo</th>"; 
 		estrutura += "<th class='celulaMateria'>Nome</th>";
 		estrutura += "<th class='celulaAlterar'>Alterar</th>"; 
 		estrutura += "<th class='celulaExcluir'>Excluir</th>";
@@ -60,7 +60,7 @@ public class MateriaDao {
 		estrutura += "</thead>";
 		estrutura += "<tbody>";
 		
-		//Obter os dados dos usuários
+		//Obter os dados dos usuï¿½rios
 		try {
 			
 			//SQL
@@ -73,7 +73,7 @@ public class MateriaDao {
 			//Executar o comando e obter os dados 
 			ResultSet rs = stmt.executeQuery(sql);
 			
-			//Laço
+			//Laï¿½o
 			while(rs.next()) {
 				
 				estrutura += "<tr>";	
@@ -91,7 +91,7 @@ public class MateriaDao {
 			estrutura += "</tbody>";
 			estrutura += "</table>";
 			
-			//Voltar rs para o índice 0
+			//Voltar rs para o ï¿½ndice 0
 			rs.beforeFirst();
 			
 			while(rs.next()) {
@@ -118,7 +118,7 @@ public class MateriaDao {
 			}
 			
 		}catch(Exception e) {
-			System.out.println("Falha ao listar matérias.");
+			System.out.println("Falha ao listar matï¿½rias.");
 		}
 		
 
@@ -129,34 +129,34 @@ public class MateriaDao {
 		
 	}
 	
-	//MÉTODO LISTAR VÍNCULOS MATÉRIA #######################################
+	//Mï¿½TODO LISTAR Vï¿½NCULOS MATï¿½RIA #######################################
 	public String detalhesMateria(String idMateria){
 	
 	//Estrutura
 	String estruturaDetalhes = "<table class='table table-striped tabela'>";
 	estruturaDetalhes += "<thead>";
 	estruturaDetalhes += "<tr>";
-	estruturaDetalhes += "<th class='celulaCod'>Código</th>"; 
+	estruturaDetalhes += "<th class='celulaCod'>Cï¿½digo</th>"; 
 	estruturaDetalhes += "<th class='celulaNome'>Nome</th>";  
 	estruturaDetalhes += "</tr>";
 	estruturaDetalhes += "</thead>";
 	
-	//Obter os dados dos usuários
+	//Obter os dados dos usuï¿½rios
 	try {
 		
 		//SQL
 		String sql = "SELECT cadastrofuncionarios.idCadastro, cadastrofuncionarios.nome FROM cadastrofuncionarios INNER JOIN funcionarios ON funcionarios.idCadastro = cadastrofuncionarios.idCadastro INNER JOIN leciona ON leciona.idFuncionario = funcionarios.idFuncionario WHERE leciona.idMateria = ?";
 		
-		//PREPARAR CONEXÃO
+		//PREPARAR CONEXï¿½O
 		PreparedStatement pstmt = conexao.prepareStatement(sql);
 		
-		//PARÂMETROS
+		//PARï¿½METROS
 		pstmt.setString(1, idMateria);
 		
 		//EXECUTAR COMANDO
 		ResultSet rs = pstmt.executeQuery();
 		
-		//Laço
+		//Laï¿½o
 		while(rs.next()) {
 	
 			estruturaDetalhes += "<tr>";
@@ -177,47 +177,47 @@ public class MateriaDao {
 	return estruturaDetalhes;		
 	}
 	
-	//MÉTODO PARA EXCLUIR MATÉRIA ##########################################
+	//Mï¿½TODO PARA EXCLUIR MATï¿½RIA ##########################################
 	public void excluirMateria(int idMateria) {
 		
-		//Tenta realizar a exclusão
+		//Tenta realizar a exclusï¿½o
 		try {
 			
 			//SQL
 			String sql = "DELETE FROM materias WHERE idMateria = ?";
 			
-			//Prepara a conexão
+			//Prepara a conexï¿½o
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
-			//Parâmetro
+			//Parï¿½metro
 			pstmt.setInt(1, idMateria);
 			
-			//Executa a ação
+			//Executa a aï¿½ï¿½o
 			pstmt.execute();
 			
 		}catch(Exception e) {
-			System.out.println("Falha ao excluir matéria.");
+			System.out.println("Falha ao excluir matï¿½ria.");
 		}
 	}
 	
-	//MÉTODO OBTER DADOS DA MATÉRIA SELECIONADA ############################
+	//Mï¿½TODO OBTER DADOS DA MATï¿½RIA SELECIONADA ############################
 	public MateriaBean dadosMateria(String idMateria){
 		
 		MateriaBean obj = new MateriaBean();
 		
-		//Tenta realizar a exclusão
+		//Tenta realizar a exclusï¿½o
 		try {
 			
 			//SQL
 			String sql = "SELECT * FROM materias WHERE idMateria = ?";
 			
-			//Prepara a conexão
+			//Prepara a conexï¿½o
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
-			//Parâmetro
+			//Parï¿½metro
 			pstmt.setString(1, idMateria);
 			
-			//Executa a ação
+			//Executa a aï¿½ï¿½o
 			ResultSet rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -228,7 +228,7 @@ public class MateriaDao {
 			}	
 			
 		}catch(Exception e) {
-			System.out.println("Falha ao selecionar matéria. "+e);
+			System.out.println("Falha ao selecionar matï¿½ria. "+e);
 		}
 		
 		//Retorno
@@ -236,7 +236,7 @@ public class MateriaDao {
 		
 	}
 	
-	//MÉTODO MODAL #########################################################
+	//Mï¿½TODO MODAL #########################################################
 	public String modalAlterar(String idMateria) {
 		
 		//String estruturaAlterar = "<% if(request.getParameter('idUsuario') == null){ %>";
@@ -244,7 +244,7 @@ public class MateriaDao {
 		estruturaAlterar+="<div class='modal-dialog' role='document'>";
 		estruturaAlterar+="<div class='modal-content'>";
 		
-		//INÍCIO FORMULARIO
+		//INï¿½CIO FORMULARIO
 		estruturaAlterar+="<form action='acoes/alterarMateria.jsp'>";
 		
 		estruturaAlterar+="<div class='modal-header'>";
@@ -254,25 +254,25 @@ public class MateriaDao {
 		estruturaAlterar+="<div class='modal-body'>";
 		estruturaAlterar+="<p>Dados do cadastro: </p>";
 		
-		//Instanciar objeto usuário
+		//Instanciar objeto usuï¿½rio
 		MateriaBean materia = new MateriaBean();
 		materia = new MateriaDao().dadosMateria(idMateria);
 		
 		
-		//CAMPOS FORMULÁRIO
+		//CAMPOS FORMULï¿½RIO
 		estruturaAlterar+="<input type='hidden' name='idMateria' id='idMateria' value='"+materia.getIdMateria()+"'><br>";
 		estruturaAlterar+="<input type='text' name='nomeMateria' id='nomeMateria' value='"+materia.getNomeMateria()+"'><br>";	
 		
 		estruturaAlterar+="</div>";
 		estruturaAlterar+="<div class='modal-footer'>";
 		
-		//BOTÃO SALVAR FORMULARIO
+		//BOTï¿½O SALVAR FORMULARIO
 		estruturaAlterar+="<input type='submit' class='btn btn-primary' value='Salvar'>";
 		
 		estruturaAlterar+="<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>";
 		estruturaAlterar+="</div>";
 		
-		//FIM FORMULÁRIO
+		//FIM FORMULï¿½RIO
 		estruturaAlterar+="</form>";
 		
 		estruturaAlterar+="</div><!-- /.modal-content -->";
@@ -282,7 +282,7 @@ public class MateriaDao {
 		return estruturaAlterar;
 	}
 	
-	//MÉTODO ALTERAR MATÉRIA ###############################################
+	//Mï¿½TODO ALTERAR MATï¿½RIA ###############################################
 	public void alterarDadosMateria(MateriaBean obj) {
 		
 		//Tenta atualizar
@@ -291,10 +291,10 @@ public class MateriaDao {
 			//SQL
 			String sql = "UPDATE materias SET nomeMateria = ? WHERE idMateria = ?";
 			
-			//Prepara a conexão
+			//Prepara a conexï¿½o
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
-			//Parâmetros
+			//Parï¿½metros
 			pstmt.setString(1, obj.getNomeMateria());
 			pstmt.setInt(2, obj.getIdMateria());
 			
@@ -307,7 +307,7 @@ public class MateriaDao {
 		
 	}
 	
-	//MÉTODO MODAL EXCLUIR MATÉRIA
+	//Mï¿½TODO MODAL EXCLUIR MATï¿½RIA
 	public String modalExcluir(String idMateria){
 		//String estruturaAlterar = "<% if(request.getParameter('idUsuario') == null){ %>";
 		String estruturaExcluir = "<div class='modal fade' id='modalExcluir"+idMateria+"' tabindex='-1' role='dialog'>";	
@@ -315,7 +315,7 @@ public class MateriaDao {
 		estruturaExcluir+="<div class='modal-content'>";
 		estruturaExcluir+="<div class='modal-header'>";
 		estruturaExcluir+="<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-		estruturaExcluir+="<h4 class='modal-title'>Excluir matéria</h4>";
+		estruturaExcluir+="<h4 class='modal-title'>Excluir matï¿½ria</h4>";
 		estruturaExcluir+="</div>";
 		estruturaExcluir+="<div class='modal-body'>";
 		estruturaExcluir+="<p>Deseja realmente excluir?</p>";

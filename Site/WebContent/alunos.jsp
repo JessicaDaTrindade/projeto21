@@ -60,6 +60,17 @@
 
 <script src="js/script.js"></script>
 
+<!-- MÁSCARA CPF -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script>
+    $(document).ready(function () { 
+        var $seuCampoCpf = $("#CPF");
+        $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+    });
+</script>
+
 
 
 
@@ -172,11 +183,13 @@
 							</label> <br>
 
 							<!-- Cadastrar RG e CPF  -->
-							<label>RG <br> <input type="text" name="rg" required>
+							<label>RG <br> <input type="text" name="rg" maxlength="15">
 							</label> <label>CPF <br> <input type="text"
-								 name="cpf"  class="cpf" placeholder="Ex.: 000.000.000-00"
-								required>
-			 
+								 name="cpf"  id="CPF" maxlength="14" placeholder="Ex.: 000.000.000-00"
+								required/>
+								
+								
+
 							</label>
 							
 

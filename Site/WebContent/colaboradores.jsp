@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <%@page import="br.com.site.dao.ColaboradorDAO"%>
 <%@page import="br.com.site.bean.ColaboradorBEAN"%>
+
+
 <html>
 <head>
 <!-- verificar sessão -->
@@ -32,6 +34,8 @@
 
 <script src="main.js"></script>
 
+
+
 <!-- JQuery -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -54,6 +58,19 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+	
+	<!-- MÁSCARA CPF -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script>
+    $(document).ready(function () { 
+        var $seuCampoCpf = $("#CPF");
+        $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+       
+        
+    });
+</script>
 
 </head>
 <body>
@@ -148,9 +165,9 @@
 
 
 							<!-- Cadastrar RG e CPF  -->
-							<label> RG <br> <input type="text" name="rg">
+							<label> RG <br> <input type="text" name="rg" maxlength="15">
 							</label> <label> CPF <br> <input type="text"
-								class=" cpf-mask	" name="cpf" placeholder="Ex.: 000.000.000-00">
+								 name="cpf" id="CPF" maxlength="14" placeholder="Ex.: 000.000.000-00">
 							</label>
 
 							<!-- cadastrar data de Nascimento -->
@@ -164,7 +181,7 @@
 								type="radio" value="Casado(a)" name="estadoCivil">
 								Casado(a) <input type="radio" value="Divorciado(a)"
 								name="estadoCivil"> Divorciado(a) <input type="radio"
-								value="Viuvo(a)" name="estadoCivil">ViÃºvo(a)
+								value="Viuvo(a)" name="estadoCivil">Viúvo(a)
 							</label> <br>
 
 							<hr class="separador">
@@ -174,18 +191,18 @@
 
 							<input type="text" name="cep" placeholder="CEP"> <input
 								type="text" name="logradouro" placeholder="LOGRADOURO">
-							<input type="text" name="numero" placeholder="NÂº"> <br>
+							<input type="text" name="numero" placeholder="Nº"> <br>
 							<br> <input type="text" name="bairro" placeholder="BAIRRO">
-							<input type="text" name="municipio" placeholder="MUNICÃPIO">
+							<input type="text" name="municipio" placeholder="MUNICÍPIO">
 							<input type="text" name="complemento" placeholder="COMPLEMENTO">
 							<hr class="separador">
 
 							<!-- Contato -->
 							</label> <br> <label>Telefone <br> <input type="text"
-								id="name" class="phone-ddd-mask" name="telefone"
+								 id="TEL" name="telefone"  
 								placeholder="Ex.: (00) 0000-0000">
 							</label> <label>Celular <br> <input type="text"
-								class="phone-ddd-mask" name="celular"
+								id="TEL" name="celular"
 								placeholder="Ex.: (00) 0000-0000">
 							</label> <label>Email <br> <input type="text" name="celular"
 								placeholder="Ex.: exemplo@gmail.com">
@@ -198,12 +215,12 @@
 								name="Cargo">Diretor(a) <input type="radio"
 								value="Professor" name="Cargo" onclick="Mudarestado('minhaDiv')">Professor(a)
 								<input type="radio" value="Coordenador" name="Cargo">Coordenador(a)
-								<input type="radio" value="SecretÃ¡rio(a)" name="Cargo">SecretÃ¡rio(a)
-								<input type="radio" value="ServiÃ§os Gerais" name="Cargo">ServiÃ§os
+								<input type="radio" value="Secretário(a)" name="Cargo">Secretário(a)
+								<input type="radio" value="Serviços Gerais" name="Cargo">Serviços
 								Gerais <input type="radio" value="Cozinheiro" name="Cargo">Cozinheiro(a)
-								<input type="radio" value="BibliotecÃ¡rio(a)" name="Cargo">BibliotecÃ¡rio(a)
-							</label> <label>Salario <br> <input type="text"
-								name="Salario" placeholder="0.000,00">
+								<input type="radio" value="Bibliotecário(a)" name="Cargo">Bibliotecário(a)
+							</label> <label>Salário <br> <input type="text"
+								name="Salário" placeholder="0.000,00">
 							</label>
 
 							<script>
@@ -219,20 +236,20 @@
 							<div id="minhaDiv">
 
 								<label> <br> <input type="checkbox"
-									value="HistÃ³ria" name="Cargo">HistÃ³ria <input
-									type="checkbox" value="MatemÃ¡tica" name="Cargo">MatemÃ¡tica
-									<input type="checkbox" value="FÃ­sica" name="Cargo">FÃ­sica
-									<input type="checkbox" value="PortuguÃªs" name="Cargo">PortuguÃªs
+									value="História" name="Cargo">História <input
+									type="checkbox" value="Matemática" name="Cargo">Matemática
+									<input type="checkbox" value="Física" name="Cargo">Física
+									<input type="checkbox" value="Português" name="Cargo">Português
 									<input type="checkbox" value="Artes" name="Cargo">Artes
-									<input type="checkbox" value="EducaÃ§Ã£o FÃ­sica" name="Cargo">EducaÃ§Ã£o
-									FÃ­sica <input type="checkbox" value="CiÃªncias" name="Cargo">CiÃªncias
+									<input type="checkbox" value="Educação Física" name="Cargo">Educação
+									Física <input type="checkbox" value="Ciências" name="Cargo">Ciências
 									<input type="checkbox" value="Biologia" name="Cargo">Biologia
-									<input type="checkbox" value="InglÃªs" name="Cargo">InglÃªs
+									<input type="checkbox" value="Inglês" name="Cargo">Inglês
 									<input type="checkbox" value="Espanhol" name="Cargo">Espanhol
 									<input type="checkbox" value="Geografia" name="Cargo">Geografia
-									<input type="checkbox" value="QuÃ­mica" name="Cargo">QuÃ­mica
+									<input type="checkbox" value="Química" name="Cargo">Química
 									<input type="checkbox" value="Sociologia" name="Cargo">Sociologia
-									<input type="checkbox" value="InformÃ¡tica" name="Cargo">InformÃ¡tica
+									<input type="checkbox" value="Informática" name="Cargo">Informática
 								</label>
 
 							</div>

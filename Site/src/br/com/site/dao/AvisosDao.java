@@ -84,7 +84,7 @@ public class AvisosDao {
 					// Cabeçalho da tabelaa
 					estrutura += "<thead>";
 					estrutura += "<tr>";
-					estrutura += " <th class='idAvisosCSS'>Número</th>";
+					estrutura += " <th class='idAvisosCSS'>Código</th>";
 					estrutura += " <th class='AvisosCSS'>Avisos</th>";
 					estrutura += "<th class='Alterar'>Alterar</th>"; 
 					estrutura += "<th class='Excluir'>Excluir</th>";
